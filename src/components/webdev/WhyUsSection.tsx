@@ -33,14 +33,8 @@ const WhyUsSection = () => {
           {whyUsPoints.map((point, index) => (
             <div
               key={index}
-              className={`group bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-2xl p-8 hover:border-[#38FFCD]/50 hover:shadow-[0_0_24px_rgba(56,255,205,0.15)] transition-all duration-500 relative ${
-                index === 1 ? 'ring-2 ring-[#38FFCD]/30' : ''
-              }`}
+              className="group bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-2xl p-8 hover:border-[#38FFCD]/50 hover:shadow-[0_0_24px_rgba(56,255,205,0.15)] transition-all duration-500 relative"
             >
-              {index === 1 && (
-                <div className="absolute inset-0 bg-gradient-to-br from-[#38FFCD]/5 to-[#10E7FF]/5 rounded-2xl"></div>
-              )}
-              
               <div className="relative z-10">
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#38FFCD] transition-colors duration-300">
                   {point.title}
