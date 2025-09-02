@@ -66,7 +66,7 @@ const SocialMediaSection = () => {
 
           {/* Right - Visualization */}
           <div className="flex justify-center">
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full max-w-lg transform scale-85">
               <img 
                 src="/src/assets/ai/aktiscode_ai_social-min.webp" 
                 alt="AI automatizácia sociálnych sietí - Instagram, WhatsApp, Facebook, X" 
