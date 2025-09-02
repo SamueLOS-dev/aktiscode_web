@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Monitor, Bot, Code } from 'lucide-react';
 
 const Services = () => {
@@ -6,6 +7,7 @@ const Services = () => {
     {
       icon: Monitor,
       title: "Web & Design Excellence",
+      href: "/web",
       features: [
         "Profesionálne weby a aplikácie",
         "UX/UI + SEO optimalizácia",
@@ -16,6 +18,7 @@ const Services = () => {
     {
       icon: Bot,
       title: "AI Automation & Agents",
+      href: "/ai",
       features: [
         "Chatboty (24/7 support)",
         "AI call agenty",
@@ -26,6 +29,7 @@ const Services = () => {
     {
       icon: Code,
       title: "Custom Development",
+      href: "/aplikacie",
       features: [
         "Web aplikácie & e-shopy",
         "Mobilné & desktop aplikácie",
@@ -49,7 +53,8 @@ const Services = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <Link
+              to={service.href}
               key={index}
               className="group relative bg-white/5 backdrop-blur-lg border border-[#38FFCD]/20 rounded-2xl p-8 hover:border-[#38FFCD]/40 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#38FFCD]/20"
             >
@@ -80,7 +85,7 @@ const Services = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
