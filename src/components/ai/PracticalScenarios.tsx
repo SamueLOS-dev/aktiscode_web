@@ -104,43 +104,8 @@ const PracticalScenarios = () => {
             </div>
 
             {/* Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-[rgba(56,255,205,0.2)] backdrop-blur-sm border border-[#38FFCD]/40 rounded-full flex items-center justify-center text-[#38FFCD] hover:bg-[rgba(56,255,205,0.3)] transition-all duration-300"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-[rgba(56,255,205,0.2)] backdrop-blur-sm border border-[#38FFCD]/40 rounded-full flex items-center justify-center text-[#38FFCD] hover:bg-[rgba(56,255,205,0.3)] transition-all duration-300"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {scenarios.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'bg-[#38FFCD] scale-125'
-                      : 'bg-[#38FFCD]/30 hover:bg-[#38FFCD]/50'
-                  }`}
-                />
-              ))}
-            </div>
-
-            {/* Right Arrow */}
-            <button
-              onClick={nextSlide}
-              className="w-8 h-8 bg-[rgba(56,255,205,0.2)] backdrop-blur-sm border border-[#38FFCD]/40 rounded-full flex items-center justify-center text-[#38FFCD] hover:bg-[rgba(56,255,205,0.3)] transition-all duration-300"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
           </div>
-        </div>
+
           {/* Navigation with Dots and Arrows */}
           <div className="flex justify-center items-center mt-6 space-x-4">
             {/* Left Arrow */}
@@ -174,6 +139,7 @@ const PracticalScenarios = () => {
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
+        </div>
       </div>
     </section>
   );
