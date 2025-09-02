@@ -153,3 +153,30 @@ const PracticalScenarios = () => {
 
             {/* Dots */}
             <div className="flex space-x-2">
+              {scenarios.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'bg-[#38FFCD] scale-125'
+                      : 'bg-[#38FFCD]/30 hover:bg-[#38FFCD]/50'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Right Arrow */}
+            <button
+              onClick={nextSlide}
+              className="w-8 h-8 bg-[rgba(56,255,205,0.2)] backdrop-blur-sm border border-[#38FFCD]/40 rounded-full flex items-center justify-center text-[#38FFCD] hover:bg-[rgba(56,255,205,0.3)] transition-all duration-300"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+      </div>
+    </section>
+  );
+};
+
+export default PracticalScenarios;
