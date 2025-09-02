@@ -35,9 +35,6 @@ const ProcessSection = () => {
         </div>
 
         <div className="grid md:grid-cols-4 gap-8 relative mb-12">
-          {/* Connection line */}
-          <div className="hidden md:block absolute top-8 left-8 right-8 h-0.5 bg-gradient-to-r from-[rgba(255,255,255,0.15)] via-[rgba(255,255,255,0.15)] to-[rgba(255,255,255,0.15)]"></div>
-
           {processSteps.map((step, index) => (
             <div key={index} className="relative text-center group">
               {/* Icon with glow */}
