@@ -9,6 +9,7 @@ import Process from './components/Process';
 import WhyUs from './components/WhyUs';
 import FinalCTA from './components/FinalCTA';
 import WebDevelopment from './pages/WebDevelopment';
+import AIAutomation from './pages/AIAutomation';
 
 // Component to handle scroll to top on route change
 const ScrollToTop = () => {
@@ -42,6 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/web" element={<WebDevelopment />} />
+          <Route path="/ai" element={<AIAutomation />} />
         </Routes>
         <Footer />
       </div>
