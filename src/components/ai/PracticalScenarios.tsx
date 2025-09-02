@@ -131,11 +131,25 @@ const PracticalScenarios = () => {
                 />
               ))}
             </div>
+
+            {/* Right Arrow */}
+            <button
+              onClick={nextSlide}
+              className="w-8 h-8 bg-[rgba(56,255,205,0.2)] backdrop-blur-sm border border-[#38FFCD]/40 rounded-full flex items-center justify-center text-[#38FFCD] hover:bg-[rgba(56,255,205,0.3)] transition-all duration-300"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+          {/* Navigation with Dots and Arrows */}
+          <div className="flex justify-center items-center mt-6 space-x-4">
+            {/* Left Arrow */}
+            <button
+              onClick={prevSlide}
+              className="w-8 h-8 bg-[rgba(56,255,205,0.2)] backdrop-blur-sm border border-[#38FFCD]/40 rounded-full flex items-center justify-center text-[#38FFCD] hover:bg-[rgba(56,255,205,0.3)] transition-all duration-300"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
 
-export default PracticalScenarios;
+            {/* Dots */}
+            <div className="flex space-x-2">
