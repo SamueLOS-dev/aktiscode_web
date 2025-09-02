@@ -67,67 +67,11 @@ const CustomSolutionsSection = () => {
           {/* Right - Visualization */}
           <div className="flex justify-center">
             <div className="relative w-full max-w-md">
-              {/* Puzzle/Integration Visualization */}
-              <div className="relative">
-                {/* Central Puzzle Piece */}
-                <div className="w-24 h-24 bg-gradient-to-br from-[#38FFCD] to-[#10E7FF] rounded-2xl mx-auto shadow-[0_0_40px_rgba(56,255,205,0.4)] flex items-center justify-center relative">
-                  <Settings className="w-12 h-12 text-[#001742] animate-spin-slow" />
-                  
-                  {/* Puzzle connectors */}
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-[#38FFCD] to-[#10E7FF] rounded-full"></div>
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-[#38FFCD] to-[#10E7FF] rounded-full"></div>
-                  <div className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-gradient-to-br from-[#38FFCD] to-[#10E7FF] rounded-full"></div>
-                  <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-gradient-to-br from-[#38FFCD] to-[#10E7FF] rounded-full"></div>
-                </div>
-
-                {/* Integration Icons */}
-                {integrationIcons.map((integration, index) => {
-                  const positions = [
-                    { top: '-60px', left: '50%', transform: 'translateX(-50%)' }, // Top
-                    { bottom: '-60px', left: '50%', transform: 'translateX(-50%)' }, // Bottom
-                    { left: '-60px', top: '50%', transform: 'translateY(-50%)' }, // Left
-                    { right: '-60px', top: '50%', transform: 'translateY(-50%)' } // Right
-                  ];
-                  
-                  return (
-                    <div
-                      key={integration.name}
-                      className="absolute w-16 h-16 bg-[rgba(0,23,66,0.6)] backdrop-blur-sm border border-[rgba(16,231,255,0.25)] rounded-2xl flex flex-col items-center justify-center animate-float"
-                      style={{
-                        ...positions[index],
-                        animationDelay: `${index * 0.5}s`
-                      }}
-                    >
-                      <div className="text-2xl mb-1">{integration.icon}</div>
-                      <div className="text-xs text-[#10E7FF] font-medium">{integration.name}</div>
-                    </div>
-                  );
-                })}
-
-                {/* Connection Lines */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ width: '200px', height: '200px', left: '-50px', top: '-50px' }}>
-                  {/* Top */}
-                  <line x1="100" y1="100" x2="100" y2="40" stroke="#38FFCD" strokeWidth="2" opacity="0.4" strokeDasharray="4,4">
-                    <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" />
-                  </line>
-                  {/* Bottom */}
-                  <line x1="100" y1="100" x2="100" y2="160" stroke="#10E7FF" strokeWidth="2" opacity="0.4" strokeDasharray="4,4">
-                    <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" begin="0.5s" />
-                  </line>
-                  {/* Left */}
-                  <line x1="100" y1="100" x2="40" y2="100" stroke="#38FFCD" strokeWidth="2" opacity="0.4" strokeDasharray="4,4">
-                    <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" begin="1s" />
-                  </line>
-                  {/* Right */}
-                  <line x1="100" y1="100" x2="160" y2="100" stroke="#10E7FF" strokeWidth="2" opacity="0.4" strokeDasharray="4,4">
-                    <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" begin="1.5s" />
-                  </line>
-                </svg>
-
-                {/* Floating Data Particles */}
-                <div className="absolute -top-8 -left-8 w-4 h-4 bg-[#38FFCD]/30 rounded-full animate-bounce"></div>
-                <div className="absolute -bottom-8 -right-8 w-3 h-3 bg-[#10E7FF]/30 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-              </div>
+              <img 
+                src="/src/assets/ai/aktiscode_ai_custom.webp" 
+                alt="AI na mieru pre vaše potreby - custom riešenia a integrácie" 
+                className="w-full h-auto object-contain rounded-2xl"
+              />
             </div>
           </div>
         </div>
