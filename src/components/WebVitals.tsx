@@ -1,9 +1,5 @@
 import { useEffect } from 'react';
-import { getCLS } from 'web-vitals/dist/getCLS';
-import { getFID } from 'web-vitals/dist/getFID';
-import { getFCP } from 'web-vitals/dist/getFCP';
-import { getLCP } from 'web-vitals/dist/getLCP';
-import { getTTFB } from 'web-vitals/dist/getTTFB';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 import type { Metric } from 'web-vitals';
 
 const WebVitals = () => {
