@@ -43,8 +43,8 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/web" element={<WebDevelopment />} />
-          <Route path="/ai" element={<AIAutomation />} />
+          <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/ai-automatizacie" element={<AIAutomation />} />
           <Route path="/aplikacie" element={<Applications />} />
         </Routes>
         <Footer />

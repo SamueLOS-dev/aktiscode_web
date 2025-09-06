@@ -203,8 +203,9 @@ const Hero = () => {
           <div className="space-y-4 sm:space-y-6 lg:space-y-8 animate-fade-in-up text-center lg:text-left pt-8 sm:pt-12 lg:pt-20">
           {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight">
-            Premeníme váš nápad na moderný softvér,<br />
+            <span itemProp="headline">Premeníme váš nápad na moderný softvér,<br />
               ktorý <span className="bg-gradient-to-r from-[#10E7FF] to-[#38FFCD] bg-clip-text text-transparent">prináša výsledky</span>
+            </span>
           </h1>
 
           {/* Subheading */}
@@ -215,7 +216,10 @@ const Hero = () => {
           {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center lg:justify-start">
             {/* Primary CTA */}
-              <button className="group relative bg-[#38FFCD] text-[#001742] font-semibold text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-105 transition-all duration-300 shadow-lg shadow-[#38FFCD]/30 hover:shadow-xl hover:shadow-[#38FFCD]/50">
+              <button 
+                className="group relative bg-[#38FFCD] text-[#001742] font-semibold text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-105 transition-all duration-300 shadow-lg shadow-[#38FFCD]/30 hover:shadow-xl hover:shadow-[#38FFCD]/50"
+                aria-label="Požiadajte o demo softvérového riešenia zdarma"
+              >
                 <span className="flex items-center gap-2 sm:gap-3 justify-center">
                 Demo zdarma
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -226,6 +230,7 @@ const Hero = () => {
             <button 
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group relative bg-transparent border-2 border-[#38FFCD] text-[#38FFCD] font-semibold text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl hover:bg-[#38FFCD]/10 hover:scale-105 transition-all duration-300"
+                aria-label="Zistiť viac o našich programátorských službách"
             >
                 <span className="flex items-center gap-2 sm:gap-3 justify-center">
                   <Play className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -239,8 +244,10 @@ const Hero = () => {
           <div className="lg:hidden mt-8 flex justify-center">
             <img 
               src="/src/assets/hero_aktiscode2.webp" 
-              alt="AktisCode Hero Illustration" 
+              alt="Vývoj softvéru na mieru – AktisCode programátorská firma" 
               className="w-full max-w-sm h-auto object-contain"
+              width="384"
+              height="384"
             />
           </div>
 
@@ -248,8 +255,10 @@ const Hero = () => {
           <div className="hidden lg:flex relative animate-fade-in-up animation-delay-400 justify-center">
             <img 
               src="/src/assets/hero_aktiscode2.webp" 
-              alt="AktisCode Hero Illustration" 
+              alt="Vývoj softvéru na mieru – AktisCode programátorská firma" 
               className="w-full max-w-sm xl:max-w-lg h-auto object-contain"
+              width="512"
+              height="512"
             />
           </div>
         </div>

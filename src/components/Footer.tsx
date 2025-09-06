@@ -24,13 +24,20 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-xl font-semibold text-[#38FFCD] mb-4">Navigácia</h4>
             <ul className="space-y-3">
-              {['Domov', 'Portfólio', 'Kontakt', 'Web development', 'AI automatizácie', 'Aplikácie'].map((item) => (
-                <li key={item}>
+              {[
+                { name: 'Domov', href: '/' },
+                { name: 'Web development', href: '/web-development' },
+                { name: 'AI automatizácie', href: '/ai-automatizacie' },
+                { name: 'Aplikácie', href: '/aplikacie' },
+                { name: 'Portfólio', href: '/portfolio' },
+                { name: 'Kontakt', href: '/kontakt' }
+              ].map((item) => (
+                <li key={item.name}>
                   <a
-                    href="#"
+                    href={item.href}
                     className="text-[#10E7FF] hover:text-[#38FFCD] transition-colors duration-300 text-lg"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}

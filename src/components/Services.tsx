@@ -7,7 +7,7 @@ const Services = () => {
     {
       icon: Monitor,
       title: "Web & Design Excellence",
-      href: "/web",
+      href: "/web-development",
       features: [
         "Profesionálne weby a aplikácie",
         "UX/UI + SEO optimalizácia",
@@ -18,7 +18,7 @@ const Services = () => {
     {
       icon: Bot,
       title: "AI Automation & Agents",
-      href: "/ai",
+      href: "/ai-automatizacie",
       features: [
         "Chatboty (24/7 support)",
         "AI call agenty",

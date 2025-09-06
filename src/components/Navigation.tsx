@@ -66,13 +66,13 @@ const Navigation = () => {
   const services = [
     {
       title: 'Web development',
-      href: '/web',
+      href: '/web-development',
       description: 'Konverzný web/eshop: UX/UI, SEO, rýchlosť, škálovanie.',
       icon: Monitor
     },
     {
       title: 'AI automatizácie',
-      href: '/ai',
+      href: '/ai-automatizacie',
       description: 'Chatboty, call agenti, email/social automations, integrácie.',
       icon: Bot
     },
