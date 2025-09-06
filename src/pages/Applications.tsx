@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead';
 import AppHero from '../components/applications/AppHero';
 import StickySubNav from '../components/applications/StickySubNav';
 import AppTypeSelector from '../components/applications/AppTypeSelector';
@@ -18,7 +19,17 @@ import StickyFAB from '../components/applications/StickyFAB';
 
 const Applications = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#001742] to-[#005DFF] relative overflow-hidden">
+    <>
+      <SEOHead 
+        title="Vývoj Aplikácií Slovensko | Mobilné a Web Aplikácie – AktisCode"
+        description="Vývoj aplikácií na mieru. Web aplikácie, mobilné appky, e-shopy a desktop riešenia. Od prototypu po nasadenie. Demo zdarma do 48 hodín."
+        canonical="https://www.aktiscode.sk/aplikacie"
+        breadcrumbs={[
+          { name: "Domov", item: "https://www.aktiscode.sk/" },
+          { name: "Aplikácie", item: "https://www.aktiscode.sk/aplikacie" }
+        ]}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-[#001742] to-[#005DFF] relative overflow-hidden">
       {/* Neural Network Background */}
       <div className="fixed inset-0 opacity-[0.06] pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
@@ -86,7 +97,8 @@ const Applications = () => {
       <WorkingTogether />
       <AppFinalCTA />
       <StickyFAB />
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead';
 import WebDevHero from '../components/webdev/WebDevHero';
 import ProblemSolutionCards from '../components/webdev/ProblemSolutionCards';
 import WebDeliverables from '../components/webdev/WebDeliverables';
@@ -14,7 +15,17 @@ import StickyFAB from '../components/webdev/StickyFAB';
 
 const WebDevelopment = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#001742] to-[#005DFF] relative overflow-hidden">
+    <>
+      <SEOHead 
+        title="Web Development Slovensko | Tvorba webov na mieru – AktisCode"
+        description="Profesionálny web development. Tvorba webov, e-shopov a aplikácií na mieru. UX/UI dizajn, SEO optimalizácia. Demo zdarma do 48 hodín."
+        canonical="https://www.aktiscode.sk/web-development"
+        breadcrumbs={[
+          { name: "Domov", item: "https://www.aktiscode.sk/" },
+          { name: "Web development", item: "https://www.aktiscode.sk/web-development" }
+        ]}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-[#001742] to-[#005DFF] relative overflow-hidden">
       {/* Neural Network Background */}
       <div className="fixed inset-0 opacity-[0.06] pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
@@ -78,7 +89,8 @@ const WebDevelopment = () => {
       <WebDevFAQ />
       <WebDevFinalCTA />
       <StickyFAB />
-    </div>
+      </div>
+    </>
   );
 };
 

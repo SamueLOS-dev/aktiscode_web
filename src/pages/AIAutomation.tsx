@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead';
 import AIHero from '../components/ai/AIHero';
 import AutomationTypes from '../components/ai/AutomationTypes';
 import ChatbotSection from '../components/ai/ChatbotSection';
@@ -15,7 +16,17 @@ import StickyFAB from '../components/webdev/StickyFAB';
 
 const AIAutomation = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#001742] to-[#005DFF] relative overflow-hidden">
+    <>
+      <SEOHead 
+        title="AI Automatizácie Slovensko | Chatboty a AI agenti – AktisCode"
+        description="AI automatizácie pre váš biznis. Chatboty, call agenti, automatizácia e-mailov a sociálnych sietí. Požiadajte o demo AI riešenia zdarma."
+        canonical="https://www.aktiscode.sk/ai-automatizacie"
+        breadcrumbs={[
+          { name: "Domov", item: "https://www.aktiscode.sk/" },
+          { name: "AI automatizácie", item: "https://www.aktiscode.sk/ai-automatizacie" }
+        ]}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-[#001742] to-[#005DFF] relative overflow-hidden">
       {/* Neural Network Background */}
       <div className="fixed inset-0 opacity-[0.06] pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
@@ -80,7 +91,8 @@ const AIAutomation = () => {
       <SecuritySection />
       <AIFinalCTA />
       <StickyFAB />
-    </div>
+      </div>
+    </>
   );
 };
 

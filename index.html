@@ -41,61 +41,16 @@
     <meta name="theme-color" content="#001742" />
     <meta name="msapplication-TileColor" content="#001742" />
     
-    <!-- Structured Data - Organization Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "AktisCode",
-      "url": "https://www.aktiscode.sk",
-      "logo": "https://www.aktiscode.sk/logo.png",
-      "description": "Profesionálna programátorská firma špecializujúca sa na vývoj softvéru na mieru, web development a AI riešenia",
-      "foundingDate": "2024",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Farská 1342/50",
-        "addressLocality": "Nitra",
-        "postalCode": "949 01",
-        "addressCountry": "SK"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+421-948-480-654",
-        "email": "contact@aktiscode.com",
-        "contactType": "customer service",
-        "availableLanguage": ["Slovak", "English"]
-      },
-      "sameAs": [
-        "https://www.instagram.com/aktiscode"
-      ],
-      "areaServed": "SK",
-      "serviceType": [
-        "Vývoj softvéru na mieru",
-        "Web development",
-        "AI automatizácie",
-        "Mobilné aplikácie",
-        "E-shop riešenia"
-      ]
-    }
-    </script>
+    <!-- Hero image preload for LCP optimization -->
+    <link rel="preload" as="image" href="/src/assets/hero_aktiscode2.webp" fetchpriority="high" />
     
-    <!-- Breadcrumb Schema for Homepage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Domov",
-          "item": "https://www.aktiscode.sk/"
-        }
-      ]
-    }
-    </script>
+    <!-- Font preload -->
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" crossorigin />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
-  <body>
+  <body itemscope itemtype="https://schema.org/WebPage">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

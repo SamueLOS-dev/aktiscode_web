@@ -49,6 +49,15 @@ const Services = () => {
           <p className="text-xl text-[#10E7FF] opacity-80 max-w-3xl mx-auto">
             Kompletné riešenia pre váš digitálny úspech - od dizajnu po nasadenie
           </p>
+          
+          {/* Internal linking with keyword anchor texts */}
+          <div className="mt-8 text-center">
+            <p className="text-lg text-white/90 mb-4">
+              Špecializujeme sa na <Link to="/web-development" className="text-[#38FFCD] hover:text-[#10E7FF] underline transition-colors">tvorbu webových stránok na mieru</Link>, 
+              <Link to="/ai-automatizacie" className="text-[#38FFCD] hover:text-[#10E7FF] underline transition-colors mx-2">AI automatizácie pre firmy</Link> a 
+              <Link to="/aplikacie" className="text-[#38FFCD] hover:text-[#10E7FF] underline transition-colors">vývoj mobilných aplikácií</Link>.
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

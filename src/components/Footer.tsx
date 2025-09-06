@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#001742] pt-16 pb-6">
+    <footer className="bg-[#001742] pt-16 pb-6" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Logo & Description */}
@@ -22,13 +22,13 @@ const Footer = () => {
 
           {/* Navigation */}
           <div className="space-y-4">
-            <h4 className="text-xl font-semibold text-[#38FFCD] mb-4">Navigácia</h4>
+            <h3 className="text-xl font-semibold text-[#38FFCD] mb-4">Navigácia</h3>
             <ul className="space-y-3">
               {[
                 { name: 'Domov', href: '/' },
-                { name: 'Web development', href: '/web-development' },
-                { name: 'AI automatizácie', href: '/ai-automatizacie' },
-                { name: 'Aplikácie', href: '/aplikacie' },
+                { name: 'Tvorba webových stránok', href: '/web-development' },
+                { name: 'AI automatizácie pre firmy', href: '/ai-automatizacie' },
+                { name: 'Vývoj mobilných aplikácií', href: '/aplikacie' },
                 { name: 'Portfólio', href: '/portfolio' },
                 { name: 'Kontakt', href: '/kontakt' }
               ].map((item) => (
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-xl font-semibold text-[#38FFCD] mb-4">Kontakt</h4>
+            <h3 className="text-xl font-semibold text-[#38FFCD] mb-4">Kontakt</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-[#10E7FF]" />
@@ -94,6 +94,11 @@ const Footer = () => {
             <p className="text-[#10E7FF] opacity-60 text-sm">
               © 2025 AktisCode. Všetky práva vyhradené.
             </p>
+            <div className="mt-2 md:mt-0">
+              <p className="text-[#10E7FF] opacity-60 text-sm">
+                Profesionálna <span className="text-[#38FFCD]">programátorská firma Slovensko</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>

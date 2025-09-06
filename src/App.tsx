@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import SEOHead from './components/SEOHead';
+import WebVitals from './components/WebVitals';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -26,6 +28,7 @@ const ScrollToTop = () => {
 // Home page component wrapper
 const HomePage = () => (
   <>
+    <SEOHead />
     <Hero />
     <ProblemSolution />
     <Services />
@@ -37,19 +40,24 @@ const HomePage = () => (
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen">
-        <ScrollToTop />
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/web-development" element={<WebDevelopment />} />
-          <Route path="/ai-automatizacie" element={<AIAutomation />} />
-          <Route path="/aplikacie" element={<Applications />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <>
+      <WebVitals />
+      <Router>
+        <div className="min-h-screen">
+          <ScrollToTop />
+          <Navigation />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/web-development" element={<WebDevelopment />} />
+              <Route path="/ai-automatizacie" element={<AIAutomation />} />
+              <Route path="/aplikacie" element={<Applications />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </>
   );
 }
 
