@@ -78,7 +78,7 @@ const Navigation = () => {
     },
     {
       title: 'Aplikácie',
-      href: '/aplikacie',
+      href: '/aplikacie', 
       description: 'Web, mobil & desktop na mieru, od prototypu po produkciu.',
       icon: Code
     }
