@@ -8,6 +8,10 @@
   font-family: 'Inter', sans-serif;
 }
 
+* {
+  font-family: 'Inter', sans-serif;
+}
+
 @keyframes fade-in-up {
   from {
     opacity: 0;
