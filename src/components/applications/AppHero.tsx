@@ -149,13 +149,6 @@ const AppHero = () => {
                 </div>
 
                 {/* AI Orb */}
-                <div className="absolute -top-8 right-8 z-40 w-12 h-12 bg-gradient-to-br from-[#10E7FF] to-[#38FFCD] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(16,231,255,0.4)] animate-pulse-slow">
-                  <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-[#001742] rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
