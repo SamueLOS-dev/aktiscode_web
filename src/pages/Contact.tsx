@@ -146,7 +146,7 @@ const Contact = () => {
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-4">AktisCode s. r. o.</h3>
                       <p className="text-[#10E7FF]/80 leading-relaxed mb-6">
-                        Profesionálna programátorská firma špecializujúca sa na vývoj softvéru na mieru. 
+                        Softvérová spoločnosť špecializujúca sa na vývoj softvéru na mieru. 
                         Kombinujeme najnovšie AI technológie s odbornou expertízou, aby sme vám dodali 
                         riešenia, ktoré sú nielen moderné a funkčné, ale aj vytvorené presne na mieru 
                         vašim potrebám a cieľom.
