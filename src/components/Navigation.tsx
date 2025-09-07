@@ -187,13 +187,13 @@ const Navigation = () => {
 
             {/* Desktop CTA */}
             <div className="hidden lg:block">
-              <a
+              <Link
                 to="/demo"
                 className="bg-[#38FFCD] text-[#001742] font-semibold px-6 py-3 rounded-xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] hover:shadow-[0_0_18px_rgba(56,255,205,0.45)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#10E7FF] focus:ring-offset-2 focus:ring-offset-[#001742]"
                 aria-label="Požiadajte o demo softvérového riešenia zdarma"
               >
                 Demo zdarma
-              </a>
+              </Link>
             </div>
 
             {/* Mobile menu button */}

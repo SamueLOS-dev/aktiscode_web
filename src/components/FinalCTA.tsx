@@ -91,11 +91,14 @@ const FinalCTA = () => {
 
         <div className="flex flex-col items-center gap-6 animate-fade-in-up animation-delay-400">
           {/* Main CTA Button */}
-          <button className="group relative bg-[#005DFF] text-white font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gradient-to-r hover:from-[#005DFF] hover:to-[#38FFCD] hover:scale-105 transition-all duration-300 shadow-lg shadow-[#38FFCD]/30 hover:shadow-xl hover:shadow-[#38FFCD]/50 flex items-center gap-4">
+          <Link 
+            to="/demo"
+            className="group relative bg-[#005DFF] text-white font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gradient-to-r hover:from-[#005DFF] hover:to-[#38FFCD] hover:scale-105 transition-all duration-300 shadow-lg shadow-[#38FFCD]/30 hover:shadow-xl hover:shadow-[#38FFCD]/50 flex items-center gap-4"
+          >
             <span className="tracking-wide">👉 Požiadať o demo zadarmo</span>
             
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </Link>
           
           {/* Subtitle */}
           <p className="text-white/90 text-base font-medium">

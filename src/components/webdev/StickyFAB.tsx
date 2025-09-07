@@ -13,7 +13,6 @@ const StickyFAB = () => {
   }, []);
 
   const scrollToDemo = () => {
-    // In a real app, this would scroll to demo form or navigate to /demo
     window.location.href = '/demo';
   };
 
