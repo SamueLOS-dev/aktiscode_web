@@ -13,7 +13,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Programátorská firma Slovensko | Vývoj softvéru na mieru – AktisCode",
+  title = "Vývoj softvéru na mieru | Softvérové riešenia pre firmy – AktisCode",
   description = "AktisCode – profesionálna programátorská firma. Vývoj softvéru na mieru, weby a aplikácie, AI riešenia. Požiadajte o demo zdarma už dnes.",
   canonical = "https://www.aktiscode.sk/",
   ogImage = "https://www.aktiscode.sk/og-image.webp",
