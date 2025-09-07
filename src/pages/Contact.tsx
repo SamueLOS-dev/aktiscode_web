@@ -61,9 +61,9 @@ const Contact = () => {
               </h1>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
               {/* Contact Details */}
-              <div className="bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-2xl p-8">
+              <div className="bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-2xl p-6 lg:p-8">
                 <h2 className="text-2xl font-bold text-white mb-8">
                   Kontaktné informácie
                 </h2>
@@ -77,7 +77,7 @@ const Contact = () => {
                       <h3 className="text-lg font-semibold text-white mb-2">E-mail</h3>
                       <a
                         href="mailto:contact@aktiscode.com"
-                        className="text-[#10E7FF] hover:text-[#38FFCD] transition-colors duration-300 text-lg"
+                        className="text-[#10E7FF] hover:text-[#38FFCD] transition-colors duration-300 text-base lg:text-lg break-all"
                       >
                         contact@aktiscode.com
                       </a>
@@ -92,7 +92,7 @@ const Contact = () => {
                       <h3 className="text-lg font-semibold text-white mb-2">Telefón</h3>
                       <a
                         href="tel:+421948480654"
-                        className="text-[#10E7FF] hover:text-[#38FFCD] transition-colors duration-300 text-lg"
+                        className="text-[#10E7FF] hover:text-[#38FFCD] transition-colors duration-300 text-base lg:text-lg"
                       >
                         +421 948 480 654
                       </a>
@@ -105,7 +105,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">Adresa</h3>
-                      <div className="text-[#10E7FF] text-lg">
+                      <div className="text-[#10E7FF] text-base lg:text-lg">
                         <p>Farská 1342/50</p>
                         <p>949 01 Nitra</p>
                         <p>Slovensko</p>
@@ -123,7 +123,7 @@ const Contact = () => {
                         href="https://instagram.com/aktiscode"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#10E7FF] hover:text-[#38FFCD] transition-colors duration-300 text-lg"
+                        className="text-[#10E7FF] hover:text-[#38FFCD] transition-colors duration-300 text-base lg:text-lg"
                       >
                         @aktiscode
                       </a>
@@ -133,7 +133,7 @@ const Contact = () => {
               </div>
 
               {/* Company Information */}
-              <div className="bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-2xl p-8">
+              <div className="bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-2xl p-6 lg:p-8">
                 <h2 className="text-2xl font-bold text-white mb-8">
                   Informácie o firme
                 </h2>
@@ -145,7 +145,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-4">AktisCode s. r. o.</h3>
-                      <p className="text-[#10E7FF]/80 leading-relaxed mb-6">
+                      <p className="text-[#10E7FF]/80 leading-relaxed mb-6 text-sm lg:text-base">
                         Softvérová spoločnosť špecializujúca sa na vývoj softvéru na mieru. 
                         Kombinujeme najnovšie AI technológie s odbornou expertízou, aby sme vám dodali 
                         riešenia, ktoré sú nielen moderné a funkčné, ale aj vytvorené presne na mieru 
@@ -155,19 +155,19 @@ const Contact = () => {
                   </div>
 
                   <div className="border-t border-[rgba(16,231,255,0.15)] pt-6">
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                       <div className="flex items-start space-x-3">
                         <FileText className="w-5 h-5 text-[#38FFCD] mt-1 flex-shrink-0" />
                         <div>
                           <p className="text-white font-medium">IČO</p>
-                          <p className="text-[#10E7FF]/80">57 080 411</p>
+                          <p className="text-[#10E7FF]/80 text-sm lg:text-base">57 080 411</p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
                         <FileText className="w-5 h-5 text-[#38FFCD] mt-1 flex-shrink-0" />
                         <div>
                           <p className="text-white font-medium">DIČ</p>
-                          <p className="text-[#10E7FF]/80">2122559373</p>
+                          <p className="text-[#10E7FF]/80 text-sm lg:text-base">2122559373</p>
                         </div>
                       </div>
                     </div>
@@ -178,19 +178,19 @@ const Contact = () => {
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-[#38FFCD] rounded-full"></div>
-                        <span className="text-[#10E7FF]/80">Tvorba webových stránok na mieru</span>
+                        <span className="text-[#10E7FF]/80 text-sm lg:text-base">Tvorba webových stránok na mieru</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-[#38FFCD] rounded-full"></div>
-                        <span className="text-[#10E7FF]/80">AI automatizácie pre firmy</span>
+                        <span className="text-[#10E7FF]/80 text-sm lg:text-base">AI automatizácie pre firmy</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-[#38FFCD] rounded-full"></div>
-                        <span className="text-[#10E7FF]/80">Vývoj mobilných a webových aplikácií</span>
+                        <span className="text-[#10E7FF]/80 text-sm lg:text-base">Vývoj mobilných a webových aplikácií</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-[#38FFCD] rounded-full"></div>
-                        <span className="text-[#10E7FF]/80">E-shop riešenia</span>
+                        <span className="text-[#10E7FF]/80 text-sm lg:text-base">E-shop riešenia</span>
                       </div>
                     </div>
                   </div>
@@ -201,10 +201,10 @@ const Contact = () => {
         </div>
 
         {/* Demo Request Link */}
-        <div className="text-center mt-12 mb-16">
+        <div className="text-center mt-8 lg:mt-12 mb-16 px-6">
           <a
             href="/demo"
-            className="inline-flex items-center gap-3 bg-[#38FFCD] text-[#001742] font-semibold text-lg px-8 py-4 rounded-xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_18px_rgba(56,255,205,0.45)]"
+            className="inline-flex items-center gap-3 bg-[#38FFCD] text-[#001742] font-semibold text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4 rounded-xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_18px_rgba(56,255,205,0.45)]"
           >
             Požiadať o demo zdarma
             <ArrowRight className="w-5 h-5" />
