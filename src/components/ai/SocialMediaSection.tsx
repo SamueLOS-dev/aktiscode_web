@@ -69,7 +69,7 @@ const SocialMediaSection = () => {
             <div className="relative w-full max-w-md">
               <img 
                 src="/src/assets/ai/aktiscode_ai_social-min.webp" 
-                alt="AI automatizácia sociálnych sietí - Instagram, WhatsApp, Facebook, X" 
+                alt="AI automatizácia sociálnych sietí – okamžité odpovede na Instagrame, WhatsAppe, Facebooku a X | AktisCode"
                 className="w-full h-auto object-contain rounded-2xl"
               />
             </div>
