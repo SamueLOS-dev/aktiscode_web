@@ -99,7 +99,7 @@ const Navigation = () => {
             <div className="flex-shrink-0">
               <Link to="/" className="flex items-center">
                 <img
-                  src="/src/assets/aktiscode_logo-min.png"
+                  src={new URL('../assets/aktiscode_logo-min.png', import.meta.url).href}
                   alt="AktisCode"
                   className="h-8 md:h-10 w-auto"
                 />
@@ -226,7 +226,7 @@ const Navigation = () => {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-[rgba(16,231,255,0.15)]">
               <img
-                src="/src/assets/aktiscode_logo-min.png"
+                src={new URL('../assets/aktiscode_logo-min.png', import.meta.url).href}
                 alt="AktisCode"
                 className="h-8 w-auto"
               />

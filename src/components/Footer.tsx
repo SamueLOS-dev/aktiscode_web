@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               <img
-                src="/src/assets/aktiscode_logo-min.png"
+                src={new URL('../assets/aktiscode_logo-min.png', import.meta.url).href}
                 alt="AktisCode"
                 className="h-10 w-auto"
               />
