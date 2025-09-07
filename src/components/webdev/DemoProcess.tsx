@@ -11,7 +11,7 @@ const DemoProcess = () => {
           <div className="flex justify-center">
             <div className="relative w-full max-w-lg">
               <img 
-                src="/src/assets/web_develompent/aktiscode_web_value.webp" 
+                src={new URL('../../assets/web_develompent/aktiscode_web_value.webp', import.meta.url).href}
                 alt="Demo Process - Ukážeme vám hodnotu našich služieb" 
                 className="w-full h-auto object-contain rounded-2xl"
               />

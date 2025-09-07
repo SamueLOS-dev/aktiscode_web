@@ -93,7 +93,7 @@ const BeforeAfterSlider = () => {
               {/* Before Image (Background) */}
               <div className="relative w-full">
                 <img 
-                  src="/src/assets/web_develompent/aktiscode_web_after.webp" 
+                  src={new URL('../../assets/web_develompent/aktiscode_web_after.webp', import.meta.url).href}
                   alt="Web po úprave - moderný, konverzný dizajn" 
                   className="w-full h-auto object-cover"
                   draggable={false}
@@ -106,7 +106,7 @@ const BeforeAfterSlider = () => {
                 style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
               >
                 <img 
-                  src="/src/assets/web_develompent/aktiscode_web_before.webp" 
+                  src={new URL('../../assets/web_develompent/aktiscode_web_before.webp', import.meta.url).href}
                   alt="Web pred úpravou - nudný, neprehľadný dizajn" 
                   className="w-full h-full object-cover"
                   draggable={false}

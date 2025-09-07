@@ -65,7 +65,7 @@ const SocialMediaSection = () => {
           <div className="flex justify-center">
             <div className="relative w-full max-w-md">
               <img 
-                src="/src/assets/ai/aktiscode_ai_social-min.webp" 
+                src={new URL('../../assets/ai/aktiscode_ai_social-min.webp', import.meta.url).href}
                 alt="AI automatizácia sociálnych sietí – okamžité odpovede na Instagrame, WhatsAppe, Facebooku a X | AktisCode"
                 className="w-full h-auto object-contain rounded-2xl"
               />

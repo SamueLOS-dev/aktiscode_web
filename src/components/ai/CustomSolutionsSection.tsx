@@ -65,7 +65,7 @@ const CustomSolutionsSection = () => {
           <div className="flex justify-center">
             <div className="relative w-full max-w-md">
               <img 
-                src="/src/assets/ai/aktiscode_ai_custom.webp" 
+                src={new URL('../../assets/ai/aktiscode_ai_custom.webp', import.meta.url).href}
                 alt="Custom AI riešenia na mieru – automatizácia interných procesov, integrácia CRM, ERP a ďalších systémov | AktisCode"
                 className="w-full h-auto object-contain rounded-2xl"
               />

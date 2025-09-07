@@ -58,7 +58,7 @@ const AIInApplications = () => {
           <div className="flex justify-center">
             <div className="relative w-full max-w-lg">
               <img 
-                src="/src/assets/app/aktiscode_app_ai-min.webp" 
+                src={new URL('../../assets/app/aktiscode_app_ai-min.webp', import.meta.url).href}
                 alt="AI funkcie v aplikácii – inteligentné odpovede, personalizovaný obsah a automatické procesy | AktisCode"
                 className="w-full h-auto object-contain rounded-2xl"
               />

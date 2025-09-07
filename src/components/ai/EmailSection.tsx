@@ -26,7 +26,7 @@ const EmailSection = () => {
           <div className="flex justify-center lg:order-1">
             <div className="relative w-full max-w-md">
               <img 
-                src="/src/assets/ai/aktiscode_ai_email-min.webp" 
+                src={new URL('../../assets/ai/aktiscode_ai_email-min.webp', import.meta.url).href}
                 alt="AI automatizácia e-mailov – okamžité odpovede, personalizované follow-upy a vyššia úspešnosť kampaní | AktisCode"
                 className="w-full h-auto object-contain rounded-2xl"
               />

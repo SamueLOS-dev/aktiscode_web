@@ -42,7 +42,7 @@ const WebDevHero = () => {
                 {/* Main hero image */}
                 <div className="absolute inset-0">
                   <img 
-                    src="/src/assets/web_develompent/aktiscode_hero_web-min.webp" 
+                    src={new URL('../../assets/web_develompent/aktiscode_hero_web-min.webp', import.meta.url).href}
                     alt="Tvorba web stránok na mieru a profesionálny web dizajn pre firmy – moderné firemné webové stránky a e-shopy optimalizované pre SEO | AktisCode"
                    className="w-full h-full object-contain drop-shadow-2xl animate-float"
                   />
@@ -51,7 +51,7 @@ const WebDevHero = () => {
                 {/* Mobile mockup */}
                 <div className="absolute -bottom-4 -right-4 w-24 h-40 rounded-xl animate-float" style={{ animationDelay: '1.5s', animationDuration: '5s' }}>
                   <img 
-                    src="/src/assets/web_develompent/aktiscode_hero_web2-min.webp" 
+                    src={new URL('../../assets/web_develompent/aktiscode_hero_web2-min.webp', import.meta.url).href}
                     alt="Mobile web design mockup"
                     className="w-full h-full object-cover rounded-xl drop-shadow-lg"
                   />

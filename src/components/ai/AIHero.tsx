@@ -42,7 +42,7 @@ const AIHero = () => {
                 {/* Main hero image */}
                 <div className="absolute inset-0">
                   <img 
-                    src="/src/assets/ai/aktiscode_ai_hero-min.webp" 
+                    src={new URL('../../assets/ai/aktiscode_ai_hero-min.webp', import.meta.url).href}
                     alt="AI chatbot pre firmy, virtuálny call agent a automatizácia e-mailov a sociálnych sietí – nonstop zákaznícka podpora a zníženie nákladov | AktisCode"
                     className="w-full h-full object-contain drop-shadow-2xl"
                   />
