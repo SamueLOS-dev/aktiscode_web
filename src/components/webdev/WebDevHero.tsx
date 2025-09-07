@@ -56,7 +56,7 @@ const WebDevHero = () => {
                 <div className="absolute -bottom-4 -right-4 w-24 h-40 rounded-xl" style={{ animationDelay: '1s' }}>
                   <img 
                     src="/src/assets/web_develompent/aktiscode_hero_web2-min.webp" 
-              <div className="absolute -bottom-4 -right-4 w-24 h-40 rounded-xl animate-float" style={{ animationDelay: '2s', animationDuration: '7s' }}>
+                    alt="Mobile web design mockup"
                     className="w-full h-full object-cover rounded-xl drop-shadow-lg"
                   />
                 </div>
