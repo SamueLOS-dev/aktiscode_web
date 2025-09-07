@@ -46,7 +46,7 @@ const AIHero = () => {
                 <div className="absolute inset-0">
                   <img 
                     src="/src/assets/ai/aktiscode_ai_hero-min.webp" 
-                    alt="AI Automation Hero Illustration" 
+                    alt="AI chatbot pre firmy, virtuálny call agent a automatizácia e-mailov a sociálnych sietí – nonstop zákaznícka podpora a zníženie nákladov | AktisCode"
                     className="w-full h-full object-contain drop-shadow-2xl"
                   />
                 </div>
