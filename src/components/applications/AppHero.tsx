@@ -37,7 +37,7 @@ const AppHero = () => {
             <div className="space-y-4">
               <Link
                 to="/demo"
-                className={`group relative bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] text-[#001742] font-semibold text-lg px-8 py-4 rounded-[14px] hover:scale-[1.03] transition-all duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.35)] flex items-center gap-3 mx-auto lg:mx-0 w-fit min-w-[220px] h-[56px] justify-center overflow-hidden ${
+                className={`group relative bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] text-[#001742] font-semibold text-lg px-8 py-4 rounded-[14px] hover:scale-[1.03] transition-all duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.35)] inline-flex items-center gap-3 min-w-[220px] h-[56px] justify-center overflow-hidden ${
                   showShine ? 'before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/12 before:to-transparent before:translate-x-[-100%] before:animate-[shine_0.6s_ease-out] before:skew-x-12' : ''
                 }`}
               >

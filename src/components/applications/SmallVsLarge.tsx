@@ -95,7 +95,7 @@ const SmallVsLarge = () => {
 
             <Link
               to="/demo"
-              className="bg-transparent border border-[#38FFCD] text-[#38FFCD] font-semibold text-lg px-8 py-4 rounded-[14px] hover:bg-[#38FFCD]/10 hover:scale-[1.03] transition-all duration-200 flex items-center gap-3"
+              className="inline-flex items-center gap-3 bg-transparent border border-[#38FFCD] text-[#38FFCD] font-semibold text-lg px-8 py-4 rounded-[14px] hover:bg-[#38FFCD]/10 hover:scale-[1.03] transition-all duration-200 mt-2"
             >
               Požiadať o demo zdarma
               <ArrowRight className="w-5 h-5" />

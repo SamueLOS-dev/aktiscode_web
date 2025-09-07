@@ -36,7 +36,7 @@ const AppFinalCTA = () => {
         <div className="space-y-4">
           <Link
             to="/demo"
-            className="group bg-white text-[#001742] font-semibold text-lg px-8 py-4 rounded-[14px] hover:bg-gray-100 hover:scale-[1.03] transition-all duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.35)] flex items-center gap-3 mx-auto min-w-[240px] h-[56px] justify-center"
+            className="group bg-white text-[#001742] font-semibold text-lg px-8 py-4 rounded-[14px] hover:bg-gray-100 hover:scale-[1.03] transition-all duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.35)] inline-flex items-center gap-3 min-w-[240px] h-[56px] justify-center"
           >
             Požiadať o demo zdarma
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
