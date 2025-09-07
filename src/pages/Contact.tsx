@@ -1,6 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-import { Mail, Phone, MapPin, Building, FileText, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Building, FileText, Instagram, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   return (
