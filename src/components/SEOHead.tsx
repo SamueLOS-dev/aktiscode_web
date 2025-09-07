@@ -4,8 +4,10 @@ import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
   title?: string;
   description?: string;
+  keywords?: string;
   canonical?: string;
   ogImage?: string;
+  serviceSchema?: any;
   breadcrumbs?: Array<{
     name: string;
     item: string;
@@ -15,8 +17,10 @@ interface SEOHeadProps {
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = "Vývoj softvéru na mieru | Softvérové riešenia pre firmy – AktisCode",
   description = "AktisCode – vývoj softvéru na mieru. Softvérové riešenia pre firmy: weby, aplikácie a AI automatizácie. Požiadajte o demo zdarma už dnes.",
+  keywords = "vývoj softvéru na mieru, softvérové riešenia pre firmy, tvorba webov a aplikácií, ai automatizácie",
   canonical = "https://www.aktiscode.sk/",
   ogImage = "https://www.aktiscode.sk/og-image.webp",
+  serviceSchema,
   breadcrumbs
 }) => {
   const organizationSchema = {
@@ -93,7 +97,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content="vývoj softvéru na mieru, softvérové riešenia pre firmy, tvorba webov a aplikácií, ai automatizácie" />
+      <meta name="keywords" content={keywords} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={canonical} />
@@ -137,6 +141,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(websiteSchema)}
       </script>
+      
+      {/* Service Schema (if provided) */}
+      {serviceSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            ...serviceSchema
+          })}
+        </script>
+      )}
     </Helmet>
   );
 };
