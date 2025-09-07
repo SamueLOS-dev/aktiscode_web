@@ -14,7 +14,7 @@ interface SEOHeadProps {
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = "Vývoj softvéru na mieru | Softvérové riešenia pre firmy – AktisCode",
-  description = "AktisCode – profesionálna programátorská firma. Vývoj softvéru na mieru, weby a aplikácie, AI riešenia. Požiadajte o demo zdarma už dnes.",
+  description = "AktisCode – vývoj softvéru na mieru. Softvérové riešenia pre firmy: weby, aplikácie a AI automatizácie. Požiadajte o demo zdarma už dnes.",
   canonical = "https://www.aktiscode.sk/",
   ogImage = "https://www.aktiscode.sk/og-image.webp",
   breadcrumbs
@@ -93,7 +93,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content="programátorská firma slovensko, vývoj softvéru na mieru, software development spoločnosť, digitálne riešenia pre firmy" />
+      <meta name="keywords" content="vývoj softvéru na mieru, softvérové riešenia pre firmy, tvorba webov a aplikácií, ai automatizácie" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={canonical} />
