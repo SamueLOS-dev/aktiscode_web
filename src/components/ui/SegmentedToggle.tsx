@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, useLayoutEffect, useCallback } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 type Option = { id: 'quick' | 'complex', label: string };
 
@@ -25,6 +26,7 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
   const [thumbStyle, setThumbStyle] = useState({ width: 0, transform: 'translateX(0px)' });
   const [focusedIndex, setFocusedIndex] = useState<number>(-1);
   const resizeObserverRef = useRef<ResizeObserver | null>(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // Throttle function for performance
   const throttle = useCallback((func: Function, delay: number) => {
@@ -150,101 +152,135 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
 
   return (
     <div className={`segmented-toggle-container ${className}`}>
-      <div
-        ref={containerRef}
-        role="radiogroup"
-        aria-label={ariaLabel}
-        className={`
-          relative inline-flex items-center
-          bg-gradient-to-r from-[rgba(0,23,66,0.6)] to-[rgba(0,23,66,0.4)]
-          backdrop-blur-sm
-          border border-[rgba(16,231,255,0.18)]
-          rounded-full
-          p-0.5
-          transition-all duration-200
-          hover:border-[rgba(16,231,255,0.28)]
-          ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-        `}
-        onKeyDown={handleKeyDown}
-      >
-        {/* Thumb (sliding background) */}
-        <div
-          ref={thumbRef}
-          className={`
-            absolute top-0.5 bottom-0.5
-            bg-gradient-to-r from-[#38FFCD] to-[#10E7FF]
-            rounded-full
-            transition-all duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)]
-            shadow-[0_12px_32px_rgba(16,231,255,0.25)]
-            z-10
-            ${disabled ? 'opacity-50' : ''}
-          `}
-          style={{
-            width: `${thumbStyle.width}px`,
-            transform: thumbStyle.transform
-          }}
-          aria-hidden="true"
-        />
-
-        {/* Option buttons */}
-        {options.map((option, index) => {
-          const isSelected = option.id === value;
-          const isFocused = focusedIndex === index;
-          
-          return (
-            <button
-              key={option.id}
-              ref={el => labelRefs.current[index] = el}
-              role="radio"
-              aria-checked={isSelected}
-              tabIndex={isSelected ? 0 : -1}
-              disabled={disabled}
-              className={`
-                relative z-20
-                px-2 py-1.5 sm:px-4 sm:py-2
-                font-inter font-bold text-white
-                text-xs sm:text-sm
-                tracking-[-0.2px]
-                leading-tight
-                whitespace-nowrap
-                transition-all duration-200
-                rounded-full
-                focus:outline-none
-                hover:text-[#EAFBFF]
-                flex-shrink-0
-                ${disabled ? 'cursor-not-allowed text-[rgba(255,255,255,0.45)]' : 'cursor-pointer'}
-              `}
-              onClick={() => handleClick(option.id)}
-              onFocus={() => handleFocus(index)}
-              onBlur={handleBlur}
-              onMouseDown={(e) => {
-                // Active state - reduce glow opacity
-                if (thumbRef.current && isSelected) {
-                  thumbRef.current.style.transform = `${thumbStyle.transform} scale(0.99)`;
-                  thumbRef.current.style.boxShadow = '0 12px 32px rgba(16,231,255,0.15)';
-                }
-              }}
-              onMouseUp={() => {
-                // Reset active state
-                if (thumbRef.current && isSelected) {
-                  thumbRef.current.style.transform = thumbStyle.transform;
-                  thumbRef.current.style.boxShadow = '0 12px 32px rgba(16,231,255,0.25)';
-                }
-              }}
-              onMouseLeave={() => {
-                // Reset active state on mouse leave
-                if (thumbRef.current && isSelected) {
-                  thumbRef.current.style.transform = thumbStyle.transform;
-                  thumbRef.current.style.boxShadow = '0 12px 32px rgba(16,231,255,0.25)';
-                }
-              }}
-            >
-              {option.label}
-            </button>
-          );
-        })}
+      {/* Mobile Dropdown */}
+      <div className="md:hidden relative">
+        <button
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          className="w-full bg-gradient-to-r from-[rgba(0,23,66,0.6)] to-[rgba(0,23,66,0.4)] backdrop-blur-sm border border-[rgba(16,231,255,0.18)] rounded-xl px-4 py-3 flex items-center justify-between text-white font-medium hover:border-[rgba(16,231,255,0.28)] transition-all duration-200"
+          disabled={disabled}
+        >
+          <span>{options.find(opt => opt.id === value)?.label}</span>
+          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+        </button>
+        
+        {isDropdownOpen && (
+          <div className="absolute top-full left-0 right-0 mt-2 bg-[rgba(0,23,66,0.9)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.25)] z-50">
+            {options.map((option) => (
+              <button
+                key={option.id}
+                onClick={() => {
+                  onChange(option.id);
+                  setIsDropdownOpen(false);
+                }}
+                className={`w-full px-4 py-3 text-left text-white font-medium hover:bg-[rgba(56,255,205,0.1)] transition-colors duration-200 first:rounded-t-xl last:rounded-b-xl ${
+                  value === option.id ? 'bg-[rgba(56,255,205,0.2)] text-[#38FFCD]' : ''
+                }`}
+                disabled={disabled}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
+      {/* Desktop Segmented Toggle */}
+      <div className="hidden md:block">
+        <div
+          ref={containerRef}
+          role="radiogroup"
+          aria-label={ariaLabel}
+          className={`
+            relative inline-flex items-center
+            bg-gradient-to-r from-[rgba(0,23,66,0.6)] to-[rgba(0,23,66,0.4)]
+            backdrop-blur-sm
+            border border-[rgba(16,231,255,0.18)]
+            rounded-full
+            p-0.5
+            transition-all duration-200
+            hover:border-[rgba(16,231,255,0.28)]
+            ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
+          `}
+          onKeyDown={handleKeyDown}
+        >
+          {/* Thumb (sliding background) */}
+          <div
+            ref={thumbRef}
+            className={`
+              absolute top-0.5 bottom-0.5
+              bg-gradient-to-r from-[#38FFCD] to-[#10E7FF]
+              rounded-full
+              transition-all duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)]
+              shadow-[0_12px_32px_rgba(16,231,255,0.25)]
+              z-10
+              ${disabled ? 'opacity-50' : ''}
+            `}
+            style={{
+              width: `${thumbStyle.width}px`,
+              transform: thumbStyle.transform
+            }}
+            aria-hidden="true"
+          />
+
+          {/* Option buttons */}
+          {options.map((option, index) => {
+            const isSelected = option.id === value;
+            const isFocused = focusedIndex === index;
+            
+            return (
+              <button
+                key={option.id}
+                ref={el => labelRefs.current[index] = el}
+                role="radio"
+                aria-checked={isSelected}
+                tabIndex={isSelected ? 0 : -1}
+                disabled={disabled}
+                className={`
+                  relative z-20
+                  px-4 py-2
+                  font-inter font-bold text-white
+                  text-sm
+                  tracking-[-0.2px]
+                  leading-tight
+                  whitespace-nowrap
+                  transition-all duration-200
+                  rounded-full
+                  focus:outline-none
+                  hover:text-[#EAFBFF]
+                  flex-shrink-0
+                  ${disabled ? 'cursor-not-allowed text-[rgba(255,255,255,0.45)]' : 'cursor-pointer'}
+                `}
+                onClick={() => handleClick(option.id)}
+                onFocus={() => handleFocus(index)}
+                onBlur={handleBlur}
+                onMouseDown={(e) => {
+                  // Active state - reduce glow opacity
+                  if (thumbRef.current && isSelected) {
+                    thumbRef.current.style.transform = `${thumbStyle.transform} scale(0.99)`;
+                    thumbRef.current.style.boxShadow = '0 12px 32px rgba(16,231,255,0.15)';
+                  }
+                }}
+                onMouseUp={() => {
+                  // Reset active state
+                  if (thumbRef.current && isSelected) {
+                    thumbRef.current.style.transform = thumbStyle.transform;
+                    thumbRef.current.style.boxShadow = '0 12px 32px rgba(16,231,255,0.25)';
+                  }
+                }}
+                onMouseLeave={() => {
+                  // Reset active state on mouse leave
+                  if (thumbRef.current && isSelected) {
+                    thumbRef.current.style.transform = thumbStyle.transform;
+                    thumbRef.current.style.boxShadow = '0 12px 32px rgba(16,231,255,0.25)';
+                  }
+                }}
+              >
+                {option.label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
