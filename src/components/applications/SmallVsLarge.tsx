@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { ArrowRight, Zap, Users, BarChart3 } from 'lucide-react';
+import SegmentedToggle from '../ui/SegmentedToggle';
 
 const SmallVsLarge = () => {
-  const [activeTab, setActiveTab] = useState('small');
+  const [activeTab, setActiveTab] = useState<'quick' | 'complex'>('quick');
 
   const scrollToDemo = () => {
     window.location.href = '/demo';
   };
+
+  const toggleOptions = [
+    { id: 'quick' as const, label: 'Rýchle interné appky' },
+    { id: 'complex' as const, label: 'Komplexné riešenia & SaaS' }
+  ];
 
   return (
     <section className="relative z-10 py-20 bg-[rgba(0,23,66,0.3)]">
@@ -17,39 +23,20 @@ const SmallVsLarge = () => {
           </h2>
         </div>
 
-        {/* Tab Switcher */}
+        {/* Segmented Toggle */}
         <div className="flex justify-center mb-12">
-          <div className="relative bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-full p-1 sm:p-2 max-w-full overflow-hidden">
-            <div
-              className={`absolute top-1 sm:top-2 bottom-1 sm:bottom-2 bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] rounded-full transition-all duration-200 ${
-                activeTab === 'small' ? 'left-1 sm:left-2 right-1/2' : 'left-1/2 right-1 sm:right-2'
-              }`}
-            />
-            <div className="relative flex">
-              <button
-                onClick={() => setActiveTab('small')}
-                className={`px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold rounded-full transition-colors duration-200 whitespace-nowrap ${
-                  activeTab === 'small' ? 'text-[#001742]' : 'text-white hover:text-[#38FFCD]'
-                }`}
-              >
-                Rýchle interné appky
-              </button>
-              <button
-                onClick={() => setActiveTab('large')}
-                className={`px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold rounded-full transition-colors duration-200 whitespace-nowrap ${
-                  activeTab === 'large' ? 'text-[#001742]' : 'text-white hover:text-[#38FFCD]'
-                }`}
-              >
-                Komplexné riešenia & SaaS
-              </button>
-            </div>
-          </div>
+          <SegmentedToggle
+            options={toggleOptions}
+            value={activeTab}
+            onChange={setActiveTab}
+            ariaLabel="Výber typu riešenia"
+          />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Content */}
           <div className="space-y-8">
-            {activeTab === 'small' ? (
+            {activeTab === 'quick' ? (
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#38FFCD] to-[#10E7FF] rounded-xl flex items-center justify-center">
@@ -121,7 +108,7 @@ const SmallVsLarge = () => {
           {/* Right - Visualization */}
           <div className="flex justify-center">
             <div className="relative w-full max-w-md">
-              {activeTab === 'small' ? (
+              {activeTab === 'quick' ? (
                 // Wireframe to UI Animation
                 <div className="relative">
                   <div className="bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-[20px] p-6 shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
