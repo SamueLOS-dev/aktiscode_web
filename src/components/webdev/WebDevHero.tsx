@@ -63,16 +63,16 @@ const WebDevHero = () => {
 
                 {/* AI Chat bubble */}
               </div>
+              {/* Floating decorative elements */}
+              <div className="absolute -top-6 -left-6 w-4 h-4 bg-[#38FFCD]/30 rounded-full animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3s' }}></div>
+              <div className="absolute top-1/3 -right-8 w-3 h-3 bg-[#10E7FF]/40 rounded-full animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '4s' }}></div>
+              <div className="absolute -bottom-8 left-1/4 w-2 h-2 bg-[#38FFCD]/50 rounded-full animate-bounce" style={{ animationDelay: '3s', animationDuration: '5s' }}></div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
   );
 };
 
-              {/* Floating decorative elements */}
-              <div className="absolute -top-6 -left-6 w-4 h-4 bg-[#38FFCD]/30 rounded-full animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3s' }}></div>
-              <div className="absolute top-1/3 -right-8 w-3 h-3 bg-[#10E7FF]/40 rounded-full animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '4s' }}></div>
-              <div className="absolute -bottom-8 left-1/4 w-2 h-2 bg-[#38FFCD]/50 rounded-full animate-bounce" style={{ animationDelay: '3s', animationDuration: '5s' }}></div>
+export default WebDevHero;
