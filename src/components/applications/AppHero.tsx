@@ -147,8 +147,8 @@ const AppHero = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* AI Orb */}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -157,5 +157,3 @@ const AppHero = () => {
 };
 
 export default AppHero;
-  )
-}
