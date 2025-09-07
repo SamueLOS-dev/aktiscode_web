@@ -29,7 +29,7 @@ const Footer = () => {
                 { name: 'Tvorba webových stránok', href: '/web-development' },
                 { name: 'AI automatizácie pre firmy', href: '/ai-automatizacie' },
                 { name: 'Vývoj mobilných aplikácií', href: '/aplikacie' },
-                { name: 'Portfólio', href: '/portfolio' },
+                // { name: 'Portfólio', href: '/portfolio' },
                 { name: 'Kontakt', href: '/kontakt' }
               ].map((item) => (
                 <li key={item.name}>
