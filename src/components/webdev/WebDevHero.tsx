@@ -40,28 +40,31 @@ const WebDevHero = () => {
 
           {/* Right Column - Visual */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
+            <div className="relative group">
               {/* Hero Image */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96 group-hover:scale-105 transition-transform duration-500">
                 {/* Main hero image */}
                 <div className="absolute inset-0">
                   <img 
                     src="/src/assets/web_develompent/aktiscode_hero_web-min.webp" 
                     alt="Tvorba web stránok na mieru a profesionálny web dizajn pre firmy – moderné firemné webové stránky a e-shopy optimalizované pre SEO | AktisCode"
-                   className="w-full h-full object-contain drop-shadow-2xl"
+                   className="w-full h-full object-contain drop-shadow-2xl group-hover:drop-shadow-[0_25px_50px_rgba(56,255,205,0.3)] transition-all duration-500"
                   />
                 </div>
                 
                 {/* Mobile mockup */}
-                <div className="absolute -bottom-4 -right-4 w-24 h-40 rounded-xl" style={{ animationDelay: '1s' }}>
+                <div className="absolute -bottom-4 -right-4 w-24 h-40 rounded-xl group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-700 delay-200">
                   <img 
                     src="/src/assets/web_develompent/aktiscode_hero_web2-min.webp" 
                     alt="Web Development Secondary Illustration" 
-                    className="w-full h-full object-cover rounded-xl drop-shadow-lg"
+                    className="w-full h-full object-cover rounded-xl drop-shadow-lg group-hover:drop-shadow-[0_15px_30px_rgba(16,231,255,0.4)] transition-all duration-700"
                   />
                 </div>
 
-                {/* AI Chat bubble */}
+                {/* Floating elements for enhanced hover effect */}
+                <div className="absolute -top-4 -left-4 w-3 h-3 bg-[#38FFCD] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-1000 delay-500"></div>
+                <div className="absolute top-1/2 -right-8 w-2 h-2 bg-[#10E7FF] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-1000 delay-700"></div>
+                <div className="absolute -bottom-8 left-1/4 w-4 h-4 bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] rounded-full opacity-0 group-hover:opacity-60 group-hover:animate-pulse transition-all duration-1000 delay-300"></div>
               </div>
             </div>
           </div>
