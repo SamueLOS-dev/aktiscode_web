@@ -14,6 +14,7 @@ import WebDevelopment from './pages/WebDevelopment';
 import AIAutomation from './pages/AIAutomation';
 import Applications from './pages/Applications';
 import Contact from './pages/Contact';
+import Demo from './pages/Demo';
 
 // Component to handle scroll to top on route change
 const ScrollToTop = () => {
@@ -54,6 +55,7 @@ function App() {
               <Route path="/ai-automatizacie" element={<AIAutomation />} />
               <Route path="/aplikacie" element={<Applications />} />
               <Route path="/kontakt" element={<Contact />} />
+              <Route path="/demo" element={<Demo />} />
             </Routes>
           </main>
           <Footer />
