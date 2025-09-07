@@ -201,9 +201,9 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
               disabled={disabled}
               className={`
                 relative z-20
-                px-6 py-3
+                px-3 py-2 sm:px-6 sm:py-3
                 font-inter font-bold text-white
-                text-[clamp(15px,1.8vw,22px)]
+                text-xs sm:text-[clamp(15px,1.8vw,22px)]
                 tracking-[-0.2px]
                 leading-tight
                 whitespace-nowrap
@@ -214,8 +214,8 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
                 ${disabled ? 'cursor-not-allowed text-[rgba(255,255,255,0.45)]' : 'cursor-pointer'}
                 
                 /* Responsive text sizing */
-                sm:px-7 sm:py-3.5
-                sm:text-[clamp(16px,1.8vw,22px)]
+                md:px-7 md:py-3.5
+                md:text-[clamp(16px,1.8vw,22px)]
                 
                 /* Mobile stacking for very small screens */
                 max-[359px]:block max-[359px]:w-full max-[359px]:text-center
