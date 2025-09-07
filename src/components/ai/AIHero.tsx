@@ -22,7 +22,7 @@ const AIHero = () => {
             <div className="space-y-4">
               <Link
                 to="/demo"
-                className="group bg-[#38FFCD] text-[#001742] font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_18px_rgba(56,255,205,0.45)] hover:shadow-[0_0_24px_rgba(56,255,205,0.6)] flex items-center gap-3 mx-auto lg:mx-0 w-fit"
+                className="group bg-[#38FFCD] text-[#001742] font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_18px_rgba(56,255,205,0.45)] hover:shadow-[0_0_24px_rgba(56,255,205,0.6)] inline-flex items-center gap-3"
               >
                 Požiadať o demo zdarma
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
