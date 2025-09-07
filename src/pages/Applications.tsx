@@ -1,7 +1,6 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import AppHero from '../components/applications/AppHero';
-import StickySubNav from '../components/applications/StickySubNav';
 import AppTypeSelector from '../components/applications/AppTypeSelector';
 import SmallVsLarge from '../components/applications/SmallVsLarge';
 import WebApplications from '../components/applications/WebApplications';
@@ -98,7 +97,6 @@ const Applications = () => {
 
       {/* All Sections */}
       <AppHero />
-      <StickySubNav />
       <AppTypeSelector />
       <SmallVsLarge />
       <WebApplications />
