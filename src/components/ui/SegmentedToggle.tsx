@@ -160,7 +160,7 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
           backdrop-blur-sm
           border border-[rgba(16,231,255,0.18)]
           rounded-full
-          p-1
+          p-0.5
           transition-all duration-200
           hover:border-[rgba(16,231,255,0.28)]
           ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
@@ -171,7 +171,7 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
         <div
           ref={thumbRef}
           className={`
-            absolute top-1 bottom-1
+            absolute top-0.5 bottom-0.5
             bg-gradient-to-r from-[#38FFCD] to-[#10E7FF]
             rounded-full
             transition-all duration-200 ease-[cubic-bezier(0.2,0.8,0.2,1)]
@@ -201,9 +201,9 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
               disabled={disabled}
               className={`
                 relative z-20
-                px-3 py-2 sm:px-6 sm:py-3
+                px-2 py-1.5 sm:px-4 sm:py-2
                 font-inter font-bold text-white
-                text-xs sm:text-[clamp(15px,1.8vw,22px)]
+                text-xs sm:text-sm
                 tracking-[-0.2px]
                 leading-tight
                 whitespace-nowrap
@@ -211,15 +211,8 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
                 rounded-full
                 focus:outline-none
                 hover:text-[#EAFBFF]
+                flex-shrink-0
                 ${disabled ? 'cursor-not-allowed text-[rgba(255,255,255,0.45)]' : 'cursor-pointer'}
-                
-                /* Responsive text sizing */
-                md:px-7 md:py-3.5
-                md:text-[clamp(16px,1.8vw,22px)]
-                
-                /* Mobile stacking for very small screens */
-                max-[359px]:block max-[359px]:w-full max-[359px]:text-center
-                max-[359px]:mb-1 max-[359px]:last:mb-0
               `}
               onClick={() => handleClick(option.id)}
               onFocus={() => handleFocus(index)}
@@ -252,23 +245,6 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
         })}
       </div>
 
-      {/* Mobile stacked layout for very small screens */}
-      <style jsx>{`
-        @media (max-width: 359px) {
-          .segmented-toggle-container .relative {
-            flex-direction: column;
-            align-items: stretch;
-          }
-          
-          .segmented-toggle-container [role="radio"] {
-            margin-bottom: 4px;
-          }
-          
-          .segmented-toggle-container [role="radio"]:last-child {
-            margin-bottom: 0;
-          }
-        }
-      `}</style>
     </div>
   );
 };
