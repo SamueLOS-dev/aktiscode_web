@@ -211,7 +211,6 @@ const SegmentedToggle: React.FC<SegmentedProps> = ({
                 rounded-full
                 focus:outline-none
                 hover:text-[#EAFBFF]
-                ${isFocused ? 'ring-2 ring-[#10E7FF] ring-offset-2 ring-offset-transparent' : ''}
                 ${disabled ? 'cursor-not-allowed text-[rgba(255,255,255,0.45)]' : 'cursor-pointer'}
                 
                 /* Responsive text sizing */
