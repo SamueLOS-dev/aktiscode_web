@@ -157,5 +157,3 @@ const AppHero = () => {
 };
 
 export default AppHero;
-  )
-}
