@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import { Mail, Phone, MapPin, Building, FileText, Instagram, ArrowRight } from 'lucide-react';
 
