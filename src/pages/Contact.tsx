@@ -53,15 +53,15 @@ const Contact = () => {
         </div>
 
         {/* Contact Content */}
-        <div className="relative z-10 py-24">
-          <div className="max-w-4xl mx-auto px-6">
+        <div className="relative z-10 py-24 min-h-screen flex items-center">
+          <div className="w-full max-w-6xl mx-auto px-6">
             <div className="text-center mb-16">
               <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
                 Kontakt
               </h1>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
               {/* Contact Details */}
               <div className="bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-2xl p-8">
                 <h2 className="text-2xl font-bold text-white mb-8">
