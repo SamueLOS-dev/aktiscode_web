@@ -21,13 +21,29 @@ const Applications = () => {
   return (
     <>
       <SEOHead 
-        title="Vývoj Aplikácií Slovensko | Mobilné a Web Aplikácie – AktisCode"
-        description="Vývoj aplikácií na mieru. Web aplikácie, mobilné appky, e-shopy a desktop riešenia. Od prototypu po nasadenie. Demo zdarma do 48 hodín."
-        canonical="https://www.aktiscode.sk/aplikacie"
+        title="Vývoj aplikácií na mieru | Webové, mobilné a desktopové aplikácie – AktisCode"
+        description="AktisCode – vývoj aplikácií na mieru. Webové aplikácie pre firmy, mobilné aplikácie iOS a Android, desktopové riešenia a SaaS systémy. Požiadajte o demo zdarma."
+        keywords="vývoj aplikácií na mieru, tvorba mobilných aplikácií ios android, webové aplikácie pre firmy, desktopové aplikácie vývoj, objednávací systém na mieru, crm aplikácia pre firmu, skladová aplikácia na mieru, vývoj saas riešenia slovensko"
+        ogImage="https://aktiscode.com/og-aplikacie.webp"
+        canonical="https://aktiscode.com/aplikacie"
         breadcrumbs={[
-          { name: "Domov", item: "https://www.aktiscode.sk/" },
-          { name: "Aplikácie", item: "https://www.aktiscode.sk/aplikacie" }
+          { name: "Domov", item: "https://aktiscode.com/" },
+          { name: "Aplikácie", item: "https://aktiscode.com/aplikacie" }
         ]}
+        serviceSchema={{
+          "@type": "Service",
+          "@id": "https://aktiscode.com/aplikacie#service",
+          "serviceType": "Vývoj aplikácií na mieru",
+          "name": "Webové, mobilné a desktopové aplikácie a SaaS systémy",
+          "description": "Vývoj aplikácií na mieru pre firmy: webové aplikácie, mobilné aplikácie pre iOS a Android, desktopové riešenia a SaaS systémy.",
+          "provider": {
+            "@type": "Organization",
+            "@id": "https://aktiscode.com/#organization"
+          },
+          "areaServed": "SK",
+          "url": "https://aktiscode.com/aplikacie",
+          "inLanguage": "sk"
+        }}
       />
       <div className="min-h-screen bg-gradient-to-br from-[#001742] to-[#005DFF] relative overflow-hidden">
       {/* Neural Network Background */}
