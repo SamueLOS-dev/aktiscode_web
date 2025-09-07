@@ -21,14 +21,14 @@ const SmallVsLarge = () => {
         <div className="flex justify-center mb-12">
           <div className="relative bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px] border border-[rgba(16,231,255,0.25)] rounded-full p-1 sm:p-2 max-w-full overflow-hidden">
             <div
-              className={`absolute top-2 bottom-2 bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] rounded-full transition-all duration-200 ${
-                activeTab === 'large' ? 'text-[#001742] px-4 sm:px-8' : 'text-white hover:text-[#38FFCD]'
+              className={`absolute top-1 sm:top-2 bottom-1 sm:bottom-2 bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] rounded-full transition-all duration-200 ${
+                activeTab === 'small' ? 'left-1 sm:left-2 right-1/2' : 'left-1/2 right-1 sm:right-2'
               }`}
             />
             <div className="relative flex">
               <button
                 onClick={() => setActiveTab('small')}
-                className={`px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold rounded-full transition-colors duration-200 whitespace-nowrap ${
+                className={`px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold rounded-full transition-colors duration-200 whitespace-nowrap ${
                   activeTab === 'small' ? 'text-[#001742]' : 'text-white hover:text-[#38FFCD]'
                 }`}
               >
@@ -36,7 +36,7 @@ const SmallVsLarge = () => {
               </button>
               <button
                 onClick={() => setActiveTab('large')}
-                className={`px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold rounded-full transition-colors duration-200 whitespace-nowrap ${
+                className={`px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold rounded-full transition-colors duration-200 whitespace-nowrap ${
                   activeTab === 'large' ? 'text-[#001742]' : 'text-white hover:text-[#38FFCD]'
                 }`}
               >
