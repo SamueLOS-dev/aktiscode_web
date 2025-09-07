@@ -36,7 +36,7 @@ const WebDevFinalCTA = () => {
         <div className="space-y-4">
           <Link
             to="/demo"
-            className="group bg-white text-[#001742] font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gray-100 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 mx-auto"
+            className="group bg-white text-[#001742] font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gray-100 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-3 mx-auto"
           >
             Požiadať o demo zdarma
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
