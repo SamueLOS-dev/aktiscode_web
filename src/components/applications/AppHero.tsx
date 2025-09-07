@@ -126,27 +126,6 @@ const AppHero = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Desktop Panel */}
-                <div className="absolute -top-4 -left-4 z-10 bg-gray-700 rounded-lg p-2 shadow-[0_10px_30px_rgba(0,0,0,0.25)] w-24 h-20">
-                  <div className="bg-gray-100 rounded h-full flex flex-col">
-                    {/* Title Bar */}
-                    <div className="h-4 bg-gray-200 rounded-t flex items-center px-1">
-                      <div className="flex gap-1">
-                        <div className="w-1 h-1 bg-red-400 rounded-full"></div>
-                        <div className="w-1 h-1 bg-yellow-400 rounded-full"></div>
-                        <div className="w-1 h-1 bg-green-400 rounded-full"></div>
-                      </div>
-                    </div>
-                    {/* Content */}
-                    <div className="flex-1 p-1 space-y-1">
-                      <div className="h-1 bg-[#001742] rounded w-3/4"></div>
-                      <div className="h-1 bg-gray-300 rounded w-full"></div>
-                      <div className="h-1 bg-gray-300 rounded w-2/3"></div>
-                      <div className="h-2 bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] rounded mt-1"></div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
