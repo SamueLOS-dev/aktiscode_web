@@ -168,13 +168,14 @@ const Navigation = () => {
               </div>
 
               {/* Other nav items */}
-              <Link
+              {/* Portfolio link - temporarily hidden */}
+              {/* <Link
                 to="/portfolio"
                 className="text-white font-medium text-lg hover:text-[#10E7FF] transition-colors duration-200 relative group"
               >
                 Portfólio
                 <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#10E7FF] to-[#38FFCD] transition-all duration-200 group-hover:w-full group-hover:left-0"></span>
-              </Link>
+              </Link> */}
               <Link
                 to="/kontakt"
                 className="text-white font-medium text-lg hover:text-[#10E7FF] transition-colors duration-200 relative group"
@@ -281,13 +282,14 @@ const Navigation = () => {
               </div>
 
               {/* Other menu items */}
-              <Link
+              {/* Portfolio link - temporarily hidden */}
+              {/* <Link
                 to="/portfolio"
                 className="block text-white font-medium text-xl py-3 hover:text-[#10E7FF] transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Portfólio
-              </Link>
+              </Link> */}
               <Link
                 to="/kontakt"
                 className="block text-white font-medium text-xl py-3 hover:text-[#10E7FF] transition-colors duration-200"
