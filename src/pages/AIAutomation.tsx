@@ -18,13 +18,29 @@ const AIAutomation = () => {
   return (
     <>
       <SEOHead 
-        title="AI Automatizácie Slovensko | Chatboty a AI agenti – AktisCode"
-        description="AI automatizácie pre váš biznis. Chatboty, call agenti, automatizácia e-mailov a sociálnych sietí. Požiadajte o demo AI riešenia zdarma."
-        canonical="https://www.aktiscode.sk/ai-automatizacie"
+        title="AI chatboty a automatizácia pre firmy | AI call agenti a email automatizácie – AktisCode"
+        description="AktisCode – AI chatboty, AI call agenti a automatizácia e-mailov a sociálnych sietí. Nonstop zákaznícka podpora, zníženie nákladov a rýchle spracovanie dopytov. Požiadajte o demo zdarma."
+        keywords="ai chatbot pre firmy, virtuálny call agent ai, automatizácia zákazníckej podpory, automatické odpovede na e-maily, ai správa sociálnych sietí, automatizácia firemných procesov, nonstop zákaznícka podpora ai, zníženie nákladov automatizáciou"
+        ogImage="https://aktiscode.com/og-ai-automatizacie.webp"
+        canonical="https://aktiscode.com/ai-automatizacie"
         breadcrumbs={[
-          { name: "Domov", item: "https://www.aktiscode.sk/" },
-          { name: "AI automatizácie", item: "https://www.aktiscode.sk/ai-automatizacie" }
+          { name: "Domov", item: "https://aktiscode.com/" },
+          { name: "AI automatizácie", item: "https://aktiscode.com/ai-automatizacie" }
         ]}
+        serviceSchema={{
+          "@type": "Service",
+          "@id": "https://aktiscode.com/ai-automatizacie#service",
+          "serviceType": "AI automatizácie pre firmy",
+          "name": "AI chatboty, AI call agenti a automatizácia e-mailov a sociálnych sietí",
+          "description": "AI chatboty, virtuálni call agenti a automatizácia firemných procesov. Nonstop zákaznícka podpora, zníženie nákladov a rýchlejšie spracovanie dopytov.",
+          "provider": {
+            "@type": "Organization",
+            "@id": "https://aktiscode.com/#organization"
+          },
+          "areaServed": "SK",
+          "url": "https://aktiscode.com/ai-automatizacie",
+          "inLanguage": "sk"
+        }}
       />
       <div className="min-h-screen bg-gradient-to-br from-[#001742] to-[#005DFF] relative overflow-hidden">
       {/* Neural Network Background */}
