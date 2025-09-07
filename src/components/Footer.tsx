@@ -96,7 +96,7 @@ const Footer = () => {
             </p>
             <div className="mt-2 md:mt-0">
               <p className="text-[#10E7FF] opacity-60 text-sm">
-                Profesionálna <span className="text-[#38FFCD]">programátorská firma Slovensko</span>
+                Profesionálna <span className="text-[#38FFCD]">tvorba softvéru a aplikácií</span> | Slovensko
               </p>
             </div>
           </div>
