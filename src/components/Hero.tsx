@@ -245,7 +245,7 @@ const Hero = () => {
           <div className="lg:hidden mt-8 flex justify-center">
             <img 
               src="/src/assets/hero_aktiscode2.webp" 
-              alt="Vývoj softvéru na mieru – AktisCode programátorská firma Slovensko" 
+              alt="Vývoj softvéru na mieru pre firmy – moderné weby, aplikácie a AI riešenia | AktisCode" 
               className="w-full max-w-sm h-auto object-contain"
               width="384"
               height="384"
@@ -258,7 +258,7 @@ const Hero = () => {
           <div className="hidden lg:flex relative animate-fade-in-up animation-delay-400 justify-center">
             <img 
               src="/src/assets/hero_aktiscode2.webp" 
-              alt="Vývoj softvéru na mieru – AktisCode programátorská firma Slovensko" 
+              alt="Vývoj softvéru na mieru pre firmy – moderné weby, aplikácie a AI riešenia | AktisCode" 
               className="w-full max-w-sm xl:max-w-lg h-auto object-contain"
               width="512"
               height="512"
