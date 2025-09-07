@@ -47,7 +47,7 @@ const WebDevHero = () => {
                 <div className="absolute inset-0">
                   <img 
                     src="/src/assets/web_develompent/aktiscode_hero_web-min.webp" 
-                    alt="Web Development Hero Illustration" 
+                    alt="Tvorba web stránok na mieru a profesionálny web dizajn pre firmy – moderné firemné webové stránky a e-shopy optimalizované pre SEO | AktisCode"
                    className="w-full h-full object-contain drop-shadow-2xl"
                   />
                 </div>
