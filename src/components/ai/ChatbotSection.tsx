@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MessageCircle, Clock, DollarSign, Calendar } from 'lucide-react';
 
 const ChatbotSection = () => {
@@ -16,10 +17,6 @@ const ChatbotSection = () => {
       text: "Dohodne stretnutie alebo získava leady priamo do kalendára."
     }
   ];
-
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
 
   return (
     <section id="chatbot" className="relative z-10 py-20">
@@ -49,12 +46,12 @@ const ChatbotSection = () => {
               ))}
             </div>
 
-            <button
-              onClick={scrollToDemo}
+            <Link
+              to="/demo"
               className="bg-[#38FFCD] text-[#001742] font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_18px_rgba(56,255,205,0.45)]"
             >
               Chcem vidieť demo chatbota
-            </button>
+            </Link>
           </div>
 
           {/* Right - Visualization */}

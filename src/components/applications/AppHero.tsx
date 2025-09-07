@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Clock, Target } from 'lucide-react';
 
 const AppHero = () => {
@@ -17,10 +18,6 @@ const AppHero = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
-
   return (
     <section className="relative z-10 py-[120px] lg:py-[120px]">
       <div className="max-w-[1200px] mx-auto px-6">
@@ -38,15 +35,15 @@ const AppHero = () => {
             </div>
 
             <div className="space-y-4">
-              <button
-                onClick={scrollToDemo}
+              <Link
+                to="/demo"
                 className={`group relative bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] text-[#001742] font-semibold text-lg px-8 py-4 rounded-[14px] hover:scale-[1.03] transition-all duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_14px_40px_rgba(0,0,0,0.35)] flex items-center gap-3 mx-auto lg:mx-0 w-fit min-w-[220px] h-[56px] justify-center overflow-hidden ${
                   showShine ? 'before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/12 before:to-transparent before:translate-x-[-100%] before:animate-[shine_0.6s_ease-out] before:skew-x-12' : ''
                 }`}
               >
                 Požiadať o demo zdarma
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
+              </Link>
               
               <p className="text-xs lg:text-sm text-white/70 font-medium">
                 Prototyp do 48 hodín • Bez záväzkov

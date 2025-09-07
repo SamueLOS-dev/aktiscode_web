@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MessageCircle, User, Zap } from 'lucide-react';
 
 const AIInApplications = () => {
@@ -16,10 +17,6 @@ const AIInApplications = () => {
       text: 'Automatické procesy pre vyššiu efektivitu.'
     }
   ];
-
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
 
   return (
     <section id="ai-applications" className="relative z-10 py-20 bg-[rgba(0,23,66,0.45)] backdrop-blur-[16px]">
@@ -49,12 +46,12 @@ const AIInApplications = () => {
               ))}
             </div>
 
-            <button
-              onClick={scrollToDemo}
+            <Link
+              to="/demo"
               className="bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] text-[#001742] font-semibold text-lg px-8 py-4 rounded-[14px] hover:scale-[1.03] transition-all duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
             >
               Zobraziť demo AI funkcií
-            </button>
+            </Link>
           </div>
 
           {/* Right - AI Visualization */}

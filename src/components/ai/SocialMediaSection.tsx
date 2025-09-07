@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Share2, Zap, Target, Clock } from 'lucide-react';
 
 const SocialMediaSection = () => {
@@ -23,10 +24,6 @@ const SocialMediaSection = () => {
     { name: 'Facebook', color: '#1877F2', icon: '👥' },
     { name: 'X', color: '#1DA1F2', icon: '🐦' }
   ];
-
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
 
   return (
     <section id="social-media" className="relative z-10 py-20">
@@ -56,12 +53,12 @@ const SocialMediaSection = () => {
               ))}
             </div>
 
-            <button
-              onClick={scrollToDemo}
+            <Link
+              to="/demo"
               className="bg-[#38FFCD] text-[#001742] font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_18px_rgba(56,255,205,0.45)]"
             >
               Vidieť demo na sociálnych sieťach
-            </button>
+            </Link>
           </div>
 
           {/* Right - Visualization */}

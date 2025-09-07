@@ -1,11 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const AIFinalCTA = () => {
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
-
   return (
     <section className="relative z-10 py-24 bg-gradient-to-r from-[#10E7FF] to-[#38FFCD] overflow-hidden">
       {/* Animated wave */}
@@ -53,13 +50,13 @@ const AIFinalCTA = () => {
         </p>
 
         <div className="space-y-4">
-          <button
-            onClick={scrollToDemo}
+          <Link
+            to="/demo"
             className="group bg-white text-[#001742] font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gray-100 hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 mx-auto"
           >
             Požiadať o demo zdarma
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </Link>
           
           <p className="text-[#001742]/70 text-sm font-medium">
             Čím skôr spustíte, tým viac dopytov zachytíte.

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Workflow, HardDrive, Shield } from 'lucide-react';
 
 const DesktopApplications = () => {
@@ -16,10 +17,6 @@ const DesktopApplications = () => {
       text: 'Lokálne dáta a vysoká bezpečnosť.'
     }
   ];
-
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
 
   return (
     <section id="desktop-applications" className="relative z-10 py-20 bg-gradient-to-br from-[#00112f] to-[#042a80]">
@@ -109,12 +106,12 @@ const DesktopApplications = () => {
               ))}
             </div>
 
-            <button
-              onClick={scrollToDemo}
+            <Link
+              to="/demo"
               className="bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] text-[#001742] font-semibold text-lg px-8 py-4 rounded-[14px] hover:scale-[1.03] transition-all duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
             >
               Zobraziť demo desktop appky
-            </button>
+            </Link>
           </div>
         </div>
       </div>

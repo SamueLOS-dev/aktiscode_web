@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Zap, Users, TrendingUp } from 'lucide-react';
 
 const EmailSection = () => {
@@ -16,10 +17,6 @@ const EmailSection = () => {
       text: "Vyššia úspešnosť outreach kampaní."
     }
   ];
-
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
 
   return (
     <section id="email" className="relative z-10 py-20 bg-[rgba(0,23,66,0.3)]">
@@ -60,12 +57,12 @@ const EmailSection = () => {
               ))}
             </div>
 
-            <button
-              onClick={scrollToDemo}
+            <Link
+              to="/demo"
               className="bg-[#38FFCD] text-[#001742] font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_18px_rgba(56,255,205,0.45)]"
             >
               Požiadať o demo e-mail agenta
-            </button>
+            </Link>
           </div>
         </div>
       </div>

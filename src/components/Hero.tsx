@@ -218,7 +218,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center lg:justify-start">
             {/* Primary CTA */}
               <Link
-                href="/demo"
+                to="/demo"
                 className="group relative bg-[#38FFCD] text-[#001742] font-semibold text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-105 transition-all duration-300 shadow-lg shadow-[#38FFCD]/30 hover:shadow-xl hover:shadow-[#38FFCD]/50"
                 aria-label="Požiadajte o demo softvérového riešenia zdarma"
               >

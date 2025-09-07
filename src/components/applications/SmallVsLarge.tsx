@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Users, BarChart3 } from 'lucide-react';
 import SegmentedToggle from '../ui/SegmentedToggle';
 
 const SmallVsLarge = () => {
   const [activeTab, setActiveTab] = useState<'quick' | 'complex'>('quick');
-
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
 
   const toggleOptions = [
     { id: 'quick' as const, label: 'Rýchle interné appky' },
@@ -96,13 +93,13 @@ const SmallVsLarge = () => {
               </div>
             )}
 
-            <button
-              onClick={scrollToDemo}
+            <Link
+              to="/demo"
               className="bg-transparent border border-[#38FFCD] text-[#38FFCD] font-semibold text-lg px-8 py-4 rounded-[14px] hover:bg-[#38FFCD]/10 hover:scale-[1.03] transition-all duration-200 flex items-center gap-3"
             >
               Požiadať o demo zdarma
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </Link>
           </div>
 
           {/* Right - Visualization */}

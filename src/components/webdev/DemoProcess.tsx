@@ -1,11 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const DemoProcess = () => {
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
-
   return (
     <section className="relative z-10 py-20">
       <div className="max-w-[1200px] mx-auto px-6">
@@ -60,13 +57,13 @@ const DemoProcess = () => {
             </div>
 
             <div className="space-y-4 pt-4">
-              <button
-                onClick={scrollToDemo}
+              <Link
+                to="/demo"
                 className="group bg-[#38FFCD] text-[#001742] font-semibold text-lg px-8 py-4 rounded-2xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_18px_rgba(56,255,205,0.45)] flex items-center gap-3"
               >
                 Požiadať o demo zdarma
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+              </Link>
               
               <p className="text-sm text-white/70 font-medium">
                 Minimálny váš čas • Maximálny výsledok

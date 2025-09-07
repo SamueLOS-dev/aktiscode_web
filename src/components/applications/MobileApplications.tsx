@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Bell, Wifi, Settings } from 'lucide-react';
 
 const MobileApplications = () => {
@@ -28,10 +29,6 @@ const MobileApplications = () => {
     }
   ];
 
-  const scrollToDemo = () => {
-    window.location.href = '/demo';
-  };
-
   return (
     <section id="mobile-applications" className="relative z-10 py-20 bg-[#001742]">
       <div className="max-w-[1200px] mx-auto px-6">
@@ -60,12 +57,12 @@ const MobileApplications = () => {
               ))}
             </div>
 
-            <button
-              onClick={scrollToDemo}
+            <Link
+              to="/demo"
               className="bg-gradient-to-r from-[#38FFCD] to-[#10E7FF] text-[#001742] font-semibold text-lg px-8 py-4 rounded-[14px] hover:scale-[1.03] transition-all duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
             >
               Zobraziť demo mobilnej appky
-            </button>
+            </Link>
           </div>
 
           {/* Right - Mobile Visualization */}

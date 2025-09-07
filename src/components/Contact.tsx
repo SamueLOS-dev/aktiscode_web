@@ -1,7 +1,7 @@
 @@ .. @@
          {/* Demo Request Link */}
          <div className="text-center mt-8 lg:mt-12 mb-16 px-6">
--          <a
+          <Link
 -            href="/demo"
 +          <Link
 +            to="/demo"
