@@ -201,7 +201,7 @@ const Contact = () => {
         </div>
 
         {/* Demo Request Link */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 mb-16">
           <a
             href="/demo"
             className="inline-flex items-center gap-3 bg-[#38FFCD] text-[#001742] font-semibold text-lg px-8 py-4 rounded-xl hover:bg-gradient-to-r hover:from-[#38FFCD] hover:to-[#10E7FF] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_18px_rgba(56,255,205,0.45)]"
