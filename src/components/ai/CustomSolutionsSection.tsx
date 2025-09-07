@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Settings, Cog, Link, Puzzle } from 'lucide-react';
+import { Settings, Cog, Link as LinkIcon, Puzzle } from 'lucide-react';
 
 const CustomSolutionsSection = () => {
   const benefits = [
@@ -9,7 +9,7 @@ const CustomSolutionsSection = () => {
       text: "Automatizácia interných procesov."
     },
     {
-      icon: Link,
+      icon: LinkIcon,
       text: "Integrácie s nástrojmi, ktoré už používate."
     },
     {
