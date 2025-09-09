@@ -161,7 +161,7 @@ const Demo = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      const endpoint = 'https://aktiscode.app.n8n.cloud/form/6b108790-cd0b-47dc-b404-00d3d387b321';
+      const endpoint = import.meta.env.VITE_FORM_ENDPOINT;
       
       console.log('Submitting form to:', endpoint);
       console.log('Form data:', formData);
