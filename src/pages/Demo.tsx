@@ -162,8 +162,27 @@ const Demo = () => {
     e.preventDefault();
     if (validateForm()) {
       // Handle form submission
-      console.log('Form submitted:', formData);
-      alert('Formulár bol úspešne odoslaný!');
+      const endpoint = import.meta.env.VITE_FORM_ENDPOINT;
+      
+      fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('Formulár bol úspešne odoslaný!');
+          // Reset form or redirect as needed
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Nastala chyba pri odosielaní formulára. Skúste to prosím znova.');
+      });
     }
   };
 
