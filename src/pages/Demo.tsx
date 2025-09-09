@@ -161,27 +161,80 @@ const Demo = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      // Handle form submission
       const endpoint = import.meta.env.VITE_FORM_ENDPOINT;
+      
+      console.log('Submitting form to:', endpoint);
+      console.log('Form data:', formData);
       
       fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        mode: 'cors',
         body: JSON.stringify(formData),
       })
       .then(response => {
+        console.log('Response status:', response.status);
+        console.log('Response headers:', response.headers);
         if (response.ok) {
           alert('Formulár bol úspešne odoslaný!');
-          // Reset form or redirect as needed
+          // Reset form
+          setFormData({
+            name: '',
+            company: '',
+            email: '',
+            serviceType: '',
+            products: [''],
+            webGoal: '',
+            currentWebsite: '',
+            websiteName: '',
+            websiteDescription: '',
+            websiteMustHave: '',
+            websiteMustNotHave: '',
+            websiteNotes: '',
+            eshopFocus: '',
+            currentEshop: '',
+            eshopName: '',
+            eshopDescription: '',
+            eshopMustHave: '',
+            eshopMustNotHave: '',
+            eshopNotes: '',
+            aiType: '',
+            aiWebsite: '',
+            aiGoal: '',
+            aiDescription: '',
+            aiMustHave: '',
+            aiMustNotHave: '',
+            aiNotes: '',
+            appGoal: '',
+            appWebsite: '',
+            appName: '',
+            appDescription: '',
+            appMustHave: '',
+            appMustNotHave: '',
+            appNotes: ''
+          });
         } else {
-          throw new Error('Network response was not ok');
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
       })
       .catch(error => {
-        console.error('Error:', error);
-        alert('Nastala chyba pri odosielaní formulára. Skúste to prosím znova.');
+        console.error('Fetch error:', error);
+        console.error('Error name:', error.name);
+        console.error('Error message:', error.message);
+        
+        let errorMessage = 'Nastala chyba pri odosielaní formulára.';
+        
+        if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
+          errorMessage = 'Problém s pripojením k serveru. Skontrolujte internetové pripojenie a skúste znova.';
+        } else if (error.message.includes('CORS')) {
+          errorMessage = 'Problém s bezpečnostnými nastaveniami. Kontaktujte podporu.';
+        } else if (error.message.includes('HTTP error')) {
+          errorMessage = `Chyba servera: ${error.message}. Skúste to prosím znova.`;
+        }
+        
+        alert(errorMessage);
       });
     }
   };
