@@ -176,7 +176,7 @@ const Demo = () => {
           case 'web':
             return {
               ...baseData,
-              products: formData.products,
+              productsOnWeb: formData.products,
               webGoal: formData.webGoal,
               currentWebsite: formData.currentWebsite,
               websiteName: formData.websiteName,
