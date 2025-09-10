@@ -163,8 +163,70 @@ const Demo = () => {
     if (validateForm()) {
       const endpoint = import.meta.env.VITE_FORM_ENDPOINT;
       
+      // Filter form data based on selected service type
+      const getFilteredFormData = () => {
+        const baseData = {
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          serviceType: formData.serviceType
+        };
+
+        switch (formData.serviceType) {
+          case 'web':
+            return {
+              ...baseData,
+              products: formData.products,
+              webGoal: formData.webGoal,
+              currentWebsite: formData.currentWebsite,
+              websiteName: formData.websiteName,
+              websiteDescription: formData.websiteDescription,
+              websiteMustHave: formData.websiteMustHave,
+              websiteMustNotHave: formData.websiteMustNotHave,
+              websiteNotes: formData.websiteNotes
+            };
+          case 'eshop':
+            return {
+              ...baseData,
+              eshopFocus: formData.eshopFocus,
+              currentEshop: formData.currentEshop,
+              eshopName: formData.eshopName,
+              eshopDescription: formData.eshopDescription,
+              eshopMustHave: formData.eshopMustHave,
+              eshopMustNotHave: formData.eshopMustNotHave,
+              eshopNotes: formData.eshopNotes
+            };
+          case 'ai':
+            return {
+              ...baseData,
+              aiType: formData.aiType,
+              aiWebsite: formData.aiWebsite,
+              aiGoal: formData.aiGoal,
+              aiDescription: formData.aiDescription,
+              aiMustHave: formData.aiMustHave,
+              aiMustNotHave: formData.aiMustNotHave,
+              aiNotes: formData.aiNotes
+            };
+          case 'app':
+            return {
+              ...baseData,
+              appGoal: formData.appGoal,
+              appWebsite: formData.appWebsite,
+              appName: formData.appName,
+              appDescription: formData.appDescription,
+              appMustHave: formData.appMustHave,
+              appMustNotHave: formData.appMustNotHave,
+              appNotes: formData.appNotes
+            };
+          default:
+            return baseData;
+        }
+      };
+
+      const filteredFormData = getFilteredFormData();
+      
       console.log('Submitting form to:', endpoint);
-      console.log('Form data:', formData);
+      console.log('Form data:', filteredFormData);
       
       fetch(endpoint, {
         method: 'POST',
@@ -172,7 +234,7 @@ const Demo = () => {
           'Content-Type': 'application/json',
         },
         mode: 'cors',
-        body: JSON.stringify(formData),
+        body: JSON.stringify(filteredFormData),
       })
       .then(response => {
         console.log('Response status:', response.status);
