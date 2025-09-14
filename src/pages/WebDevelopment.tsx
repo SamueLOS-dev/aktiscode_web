@@ -104,7 +104,6 @@ const WebDevelopment = () => {
       <WhyUsSection />
       <WebDevFAQ />
       <WebDevFinalCTA />
-      <StickyFAB />
       </div>
     </>
   );

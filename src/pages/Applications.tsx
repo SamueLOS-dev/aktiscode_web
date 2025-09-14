@@ -14,7 +14,6 @@ import IntegrationsEcosystem from '../components/applications/IntegrationsEcosys
 import SecurityReliability from '../components/applications/SecurityReliability';
 import WorkingTogether from '../components/applications/WorkingTogether';
 import AppFinalCTA from '../components/applications/AppFinalCTA';
-import StickyFAB from '../components/applications/StickyFAB';
 
 const Applications = () => {
   return (
@@ -110,7 +109,6 @@ const Applications = () => {
       <SecurityReliability />
       <WorkingTogether />
       <AppFinalCTA />
-      <StickyFAB />
       </div>
     </>
   );
