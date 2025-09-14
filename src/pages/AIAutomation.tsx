@@ -12,7 +12,6 @@ import ProcessSection from '../components/ai/ProcessSection';
 import PracticalScenarios from '../components/ai/PracticalScenarios';
 import SecuritySection from '../components/ai/SecuritySection';
 import AIFinalCTA from '../components/ai/AIFinalCTA';
-import StickyFAB from '../components/webdev/StickyFAB';
 
 const AIAutomation = () => {
   return (
@@ -106,7 +105,6 @@ const AIAutomation = () => {
       <PracticalScenarios />
       <SecuritySection />
       <AIFinalCTA />
-      <StickyFAB />
       </div>
     </>
   );
