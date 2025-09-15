@@ -15,6 +15,7 @@ import AIAutomation from './pages/AIAutomation';
 import Applications from './pages/Applications';
 import Contact from './pages/Contact';
 import Demo from './pages/Demo';
+import NotFound from './pages/NotFound';
 
 // Component to handle scroll to top on route change
 const ScrollToTop = () => {
@@ -56,6 +57,7 @@ function App() {
               <Route path="/aplikacie" element={<Applications />} />
               <Route path="/kontakt" element={<Contact />} />
               <Route path="/demo" element={<Demo />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
